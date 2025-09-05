@@ -6,40 +6,39 @@ class Migration_Migrate1 extends CI_Migration
 
     public function up()
     {
-        // Buat tabel users untuk PostgreSQL
+        /**
+         * Tabel: tbl_modul
+         */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL', // PostgreSQL auto increment
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'unsigned'       => TRUE,
+                'auto_increment' => TRUE
             ],
             'name' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '100',
-                'null' => FALSE
+                'null'       => FALSE
             ],
             'icon' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '100',
-                'null' => FALSE
+                'null'       => FALSE
             ],
             'url_modul' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '100',
-                'null' => FALSE
+                'null'       => FALSE
             ],
         ]);
-
-        $this->dbforge->add_key('id', TRUE); // Primary key
+        $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_modul', TRUE);
 
-        // insert modul
         $this->db->insert('tbl_modul', [
-            'name'       => 'Setting',
-            'icon'       => 'fas fa-wrench',
-            'url_modul'  => 'Setting',
+            'name'      => 'Setting',
+            'icon'      => 'fas fa-wrench',
+            'url_modul' => 'Setting',
         ]);
-
-        // ambil id modul Setting
         $modul_id = $this->db->insert_id();
 
         /**
@@ -47,28 +46,28 @@ class Migration_Migrate1 extends CI_Migration
          */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL',
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'unsigned'       => TRUE,
+                'auto_increment' => TRUE
             ],
             'modul_id' => [
-                'type' => 'INT',
+                'type'     => 'INT',
                 'unsigned' => TRUE
             ],
             'name' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '100',
-                'null' => FALSE
+                'null'       => FALSE
             ],
             'url' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '255',
-                'null' => TRUE
+                'null'       => TRUE
             ]
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_menu', TRUE);
 
-        // insert batch menu
         $menus = [
             ['modul_id' => $modul_id, 'name' => 'Modul', 'url' => 'Modul'],
             ['modul_id' => $modul_id, 'name' => 'Menu',  'url' => 'Menu'],
@@ -82,21 +81,20 @@ class Migration_Migrate1 extends CI_Migration
          */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL',
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'unsigned'       => TRUE,
+                'auto_increment' => TRUE
             ],
             'nama_role' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '100',
-                'null' => FALSE
+                'null'       => FALSE
             ]
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_role', TRUE);
 
-        $this->db->insert('tbl_role', [
-            'nama_role'       => 'Super User',
-        ]);
+        $this->db->insert('tbl_role', ['nama_role' => 'Super User']);
         $role_id = $this->db->insert_id();
 
         /**
@@ -104,8 +102,9 @@ class Migration_Migrate1 extends CI_Migration
          */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL',
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'unsigned'       => TRUE,
+                'auto_increment' => TRUE
             ],
             'akses' => [
                 'type' => 'INT',
@@ -119,15 +118,10 @@ class Migration_Migrate1 extends CI_Migration
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_role_akses', TRUE);
 
-        // Insert batch akses 1-9 untuk role_id
         $dataAkses = [];
         for ($i = 1; $i <= 9; $i++) {
-            $dataAkses[] = [
-                'akses'   => $i,
-                'role_id' => $role_id
-            ];
+            $dataAkses[] = ['akses' => $i, 'role_id' => $role_id];
         }
-
         $this->db->insert_batch('tbl_role_akses', $dataAkses);
 
         /**
@@ -135,40 +129,41 @@ class Migration_Migrate1 extends CI_Migration
          */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL',
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'unsigned'       => TRUE,
+                'auto_increment' => TRUE
             ],
             'name' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '100',
-                'null' => FALSE
+                'null'       => FALSE
             ],
             'username' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => '255',
-                'null' => FALSE
+                'null'       => FALSE
             ],
             'password' => [
-                'type' => 'text',
+                'type' => 'TEXT',
                 'null' => TRUE
             ],
             'status' => [
-                'type' => 'INT',
+                'type'     => 'INT',
                 'unsigned' => TRUE
             ],
             'created_at' => [
-                'type' => 'TIMESTAMP',
+                'type' => 'DATETIME',
                 'null' => TRUE,
-                'default' => null
             ],
             'nik' => [
-                'type' => 'TEXT',
-                'unsigned' => TRUE
+                'type' => 'VARCHAR',
+                'constraint' => '50',
+                'null' => TRUE
             ],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_user', TRUE);
-        // insert user
+
         $this->db->insert('tbl_user', [
             'name'       => 'Administrator',
             'username'   => 'admin',
@@ -184,29 +179,20 @@ class Migration_Migrate1 extends CI_Migration
          */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL',
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'auto_increment' => TRUE
             ],
-            'user_id' => [
-                'type' => 'INT',
-                'null' => FALSE
-            ],
-            'modul_id' => [
-                'type' => 'INT',
-                'null' => FALSE
-            ],
-            'role_id' => [
-                'type' => 'INT',
-                'null' => FALSE
-            ],
+            'user_id' => ['type' => 'INT', 'null' => FALSE],
+            'modul_id' => ['type' => 'INT', 'null' => FALSE],
+            'role_id' => ['type' => 'INT', 'null' => FALSE],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_user_modul_akses', TRUE);
 
         $this->db->insert('tbl_user_modul_akses', [
-            'user_id'       => $user_id,
-            'modul_id'       => $modul_id,
-            'role_id'       => $role_id,
+            'user_id'  => $user_id,
+            'modul_id' => $modul_id,
+            'role_id'  => $role_id,
         ]);
 
         /**
@@ -214,21 +200,12 @@ class Migration_Migrate1 extends CI_Migration
          */
         $this->dbforge->add_field([
             'id' => [
-                'type' => 'SERIAL',
-                'unsigned' => TRUE
+                'type'           => 'INT',
+                'auto_increment' => TRUE
             ],
-            'user_id' => [
-                'type' => 'INT',
-                'null' => FALSE
-            ],
-            'menu_id' => [
-                'type' => 'INT',
-                'null' => FALSE
-            ],
-            'role_id' => [
-                'type' => 'INT',
-                'null' => FALSE
-            ],
+            'user_id' => ['type' => 'INT', 'null' => FALSE],
+            'menu_id' => ['type' => 'INT', 'null' => FALSE],
+            'role_id' => ['type' => 'INT', 'null' => FALSE],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_user_menu_akses', TRUE);
@@ -243,20 +220,20 @@ class Migration_Migrate1 extends CI_Migration
         }
         $this->db->insert_batch('tbl_user_menu_akses', $dataUserMenu);
 
+        /**
+         * Tabel: tbl_status
+         */
         $this->dbforge->add_field([
-            'id' => [
-                'type' => 'SERIAL',
-            ],
+            'id' => ['type' => 'INT', 'auto_increment' => TRUE],
             'name' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => 75,
-                'null' => false,
+                'null'       => FALSE,
             ],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_status', TRUE);
 
-        // Insert default data
         $statuses = [
             ['name' => 'Draft'],
             ['name' => 'In Progress'],
@@ -268,20 +245,20 @@ class Migration_Migrate1 extends CI_Migration
         ];
         $this->db->insert_batch('tbl_status', $statuses);
 
+        /**
+         * Tabel: tbl_akses
+         */
         $this->dbforge->add_field([
-            'id' => [
-                'type' => 'SERIAL',
-            ],
+            'id' => ['type' => 'INT', 'auto_increment' => TRUE],
             'name' => [
-                'type' => 'VARCHAR',
+                'type'       => 'VARCHAR',
                 'constraint' => 75,
-                'null' => false,
+                'null'       => FALSE,
             ],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_akses', TRUE);
 
-        // Insert default data
         $akseses = [
             ['name' => 'Create'],
             ['name' => 'Read'],
@@ -295,22 +272,14 @@ class Migration_Migrate1 extends CI_Migration
         ];
         $this->db->insert_batch('tbl_akses', $akseses);
 
+        /**
+         * Tabel: tbl_approve_level
+         */
         $this->dbforge->add_field([
-            'id' => [
-                'type' => 'SERIAL',
-            ],
-            'role_id' => [
-                'type' => 'int',
-                'null' => true,
-            ],
-            'akses_id' => [
-                'type' => 'int',
-                'null' => true,
-            ],
-            'level' => [
-                'type' => 'int',
-                'null' => true,
-            ],
+            'id' => ['type' => 'INT', 'auto_increment' => TRUE],
+            'role_id' => ['type' => 'INT', 'null' => TRUE],
+            'akses_id' => ['type' => 'INT', 'null' => TRUE],
+            'level' => ['type' => 'INT', 'null' => TRUE],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_approve_level', TRUE);
@@ -318,7 +287,6 @@ class Migration_Migrate1 extends CI_Migration
 
     public function down()
     {
-        // Drop tabel dengan urutan yang tepat untuk hindari foreign key error
         $this->dbforge->drop_table('tbl_user', TRUE);
         $this->dbforge->drop_table('tbl_role', TRUE);
         $this->dbforge->drop_table('tbl_menu', TRUE);
