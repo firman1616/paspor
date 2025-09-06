@@ -66,7 +66,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="nama">Foto</label>
-                                <input type="file" class="form-control" id="filefoto" name="filefoto" required>
+                                <input type="file" class="form-control" id="filefoto" name="filefoto">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -76,14 +76,12 @@
                             </div>
                         </div>
                     </div>
-
-
+                    <div class="modal-footer">
+                        <button type="submit" form="formTambahPaspor" class="btn btn-primary">Simpan</button>
+                    </div>
                 </form>
             </div>
 
-            <div class="modal-footer">
-                <button type="submit" form="formTambahPaspor" class="btn btn-primary">Simpan</button>
-            </div>
 
         </div>
     </div>

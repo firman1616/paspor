@@ -3041,3 +3041,1069 @@ INFO - 2025-09-06 15:02:47 --> File loaded: E:\server2\htdocs\paspor\application
 INFO - 2025-09-06 15:02:47 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
 INFO - 2025-09-06 15:02:47 --> Final output sent to browser
 DEBUG - 2025-09-06 15:02:47 --> Total execution time: 0.0700
+INFO - 2025-09-06 15:32:47 --> Config Class Initialized
+INFO - 2025-09-06 15:32:47 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:32:47 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:32:47 --> URI Class Initialized
+INFO - 2025-09-06 15:32:47 --> Router Class Initialized
+INFO - 2025-09-06 15:32:47 --> Output Class Initialized
+INFO - 2025-09-06 15:32:47 --> Security Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:32:47 --> Input Class Initialized
+INFO - 2025-09-06 15:32:47 --> Language Class Initialized
+INFO - 2025-09-06 15:32:47 --> Loader Class Initialized
+INFO - 2025-09-06 15:32:47 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:32:47 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:32:47 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:32:47 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:32:47 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:32:47 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:32:47 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:32:47 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:32:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:32:47 --> Pagination Class Initialized
+INFO - 2025-09-06 15:32:47 --> Upload Class Initialized
+INFO - 2025-09-06 15:32:47 --> Email Class Initialized
+INFO - 2025-09-06 15:32:47 --> Model "M_data" initialized
+INFO - 2025-09-06 15:32:47 --> Model "M_data" initialized
+INFO - 2025-09-06 15:32:47 --> Controller Class Initialized
+INFO - 2025-09-06 15:32:47 --> Migrations Class Initialized
+INFO - 2025-09-06 15:32:47 --> Language file loaded: language/english/migration_lang.php
+INFO - 2025-09-06 15:32:47 --> Database Forge Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> Migrating down from version 2 to version 002
+DEBUG - 2025-09-06 15:32:47 --> Finished migrating to 001
+INFO - 2025-09-06 15:32:47 --> Final output sent to browser
+DEBUG - 2025-09-06 15:32:47 --> Total execution time: 0.1466
+INFO - 2025-09-06 15:32:47 --> Config Class Initialized
+INFO - 2025-09-06 15:32:47 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:32:47 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:32:47 --> URI Class Initialized
+INFO - 2025-09-06 15:32:47 --> Router Class Initialized
+INFO - 2025-09-06 15:32:47 --> Output Class Initialized
+INFO - 2025-09-06 15:32:47 --> Security Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:32:47 --> Input Class Initialized
+INFO - 2025-09-06 15:32:47 --> Language Class Initialized
+INFO - 2025-09-06 15:32:47 --> Loader Class Initialized
+INFO - 2025-09-06 15:32:47 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:32:47 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:32:47 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:32:47 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:32:47 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:32:47 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:32:47 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:32:47 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:32:47 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:32:47 --> Pagination Class Initialized
+INFO - 2025-09-06 15:32:47 --> Upload Class Initialized
+INFO - 2025-09-06 15:32:47 --> Email Class Initialized
+INFO - 2025-09-06 15:32:47 --> Model "M_data" initialized
+INFO - 2025-09-06 15:32:47 --> Model "M_data" initialized
+INFO - 2025-09-06 15:32:47 --> Controller Class Initialized
+INFO - 2025-09-06 15:32:47 --> Migrations Class Initialized
+INFO - 2025-09-06 15:32:47 --> Language file loaded: language/english/migration_lang.php
+INFO - 2025-09-06 15:32:47 --> Database Forge Class Initialized
+DEBUG - 2025-09-06 15:32:47 --> Migrating up from version 1 to version 002
+DEBUG - 2025-09-06 15:32:47 --> Finished migrating to 002
+INFO - 2025-09-06 15:32:47 --> Final output sent to browser
+DEBUG - 2025-09-06 15:32:47 --> Total execution time: 0.1487
+INFO - 2025-09-06 15:32:49 --> Config Class Initialized
+INFO - 2025-09-06 15:32:49 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:32:49 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:32:49 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:32:49 --> URI Class Initialized
+INFO - 2025-09-06 15:32:49 --> Router Class Initialized
+INFO - 2025-09-06 15:32:49 --> Output Class Initialized
+INFO - 2025-09-06 15:32:49 --> Security Class Initialized
+DEBUG - 2025-09-06 15:32:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:32:49 --> Input Class Initialized
+INFO - 2025-09-06 15:32:49 --> Language Class Initialized
+INFO - 2025-09-06 15:32:49 --> Loader Class Initialized
+INFO - 2025-09-06 15:32:49 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:32:49 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:32:49 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:32:49 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:32:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:32:49 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:32:49 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:32:49 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:32:49 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:32:49 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:32:49 --> Pagination Class Initialized
+INFO - 2025-09-06 15:32:49 --> Upload Class Initialized
+INFO - 2025-09-06 15:32:49 --> Email Class Initialized
+INFO - 2025-09-06 15:32:49 --> Model "M_data" initialized
+INFO - 2025-09-06 15:32:49 --> Model "M_data" initialized
+INFO - 2025-09-06 15:32:49 --> Controller Class Initialized
+INFO - 2025-09-06 15:32:49 --> Model "M_user" initialized
+INFO - 2025-09-06 15:32:49 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 15:32:49 --> Model "M_user" initialized
+INFO - 2025-09-06 15:32:49 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 15:32:49 --> File loaded: E:\server2\htdocs\paspor\application\views\conten/dashboard.php
+INFO - 2025-09-06 15:32:49 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 15:32:49 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 15:32:49 --> Final output sent to browser
+DEBUG - 2025-09-06 15:32:49 --> Total execution time: 0.0598
+INFO - 2025-09-06 15:52:29 --> Config Class Initialized
+INFO - 2025-09-06 15:52:29 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:52:29 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:52:29 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:52:29 --> URI Class Initialized
+INFO - 2025-09-06 15:52:29 --> Router Class Initialized
+INFO - 2025-09-06 15:52:29 --> Output Class Initialized
+INFO - 2025-09-06 15:52:29 --> Security Class Initialized
+DEBUG - 2025-09-06 15:52:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:52:29 --> Input Class Initialized
+INFO - 2025-09-06 15:52:29 --> Language Class Initialized
+INFO - 2025-09-06 15:52:29 --> Loader Class Initialized
+INFO - 2025-09-06 15:52:29 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:52:29 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:52:29 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:52:29 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:52:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:52:29 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:52:29 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:52:29 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:52:29 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:52:29 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:52:29 --> Pagination Class Initialized
+INFO - 2025-09-06 15:52:29 --> Upload Class Initialized
+INFO - 2025-09-06 15:52:29 --> Email Class Initialized
+INFO - 2025-09-06 15:52:29 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:29 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:29 --> Controller Class Initialized
+INFO - 2025-09-06 15:52:29 --> Model "M_user" initialized
+INFO - 2025-09-06 15:52:29 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 15:52:29 --> Model "M_user" initialized
+INFO - 2025-09-06 15:52:29 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 15:52:29 --> File loaded: E:\server2\htdocs\paspor\application\views\conten/dashboard.php
+INFO - 2025-09-06 15:52:29 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 15:52:29 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 15:52:29 --> Final output sent to browser
+DEBUG - 2025-09-06 15:52:29 --> Total execution time: 0.0697
+INFO - 2025-09-06 15:52:31 --> Config Class Initialized
+INFO - 2025-09-06 15:52:31 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:52:31 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:52:31 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:52:31 --> URI Class Initialized
+INFO - 2025-09-06 15:52:31 --> Router Class Initialized
+INFO - 2025-09-06 15:52:31 --> Output Class Initialized
+INFO - 2025-09-06 15:52:31 --> Security Class Initialized
+DEBUG - 2025-09-06 15:52:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:52:31 --> Input Class Initialized
+INFO - 2025-09-06 15:52:31 --> Language Class Initialized
+INFO - 2025-09-06 15:52:31 --> Loader Class Initialized
+INFO - 2025-09-06 15:52:31 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:52:31 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:52:31 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:52:31 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:52:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:52:31 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:52:31 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:52:31 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:52:31 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:52:31 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:52:31 --> Pagination Class Initialized
+INFO - 2025-09-06 15:52:31 --> Upload Class Initialized
+INFO - 2025-09-06 15:52:31 --> Email Class Initialized
+INFO - 2025-09-06 15:52:31 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:31 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:31 --> Controller Class Initialized
+INFO - 2025-09-06 15:52:31 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 15:52:31 --> Model "M_user" initialized
+INFO - 2025-09-06 15:52:31 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 15:52:31 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 15:52:31 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 15:52:31 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 15:52:31 --> Final output sent to browser
+DEBUG - 2025-09-06 15:52:31 --> Total execution time: 0.0715
+INFO - 2025-09-06 15:52:31 --> Config Class Initialized
+INFO - 2025-09-06 15:52:31 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:52:31 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:52:31 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:52:31 --> URI Class Initialized
+INFO - 2025-09-06 15:52:31 --> Router Class Initialized
+INFO - 2025-09-06 15:52:31 --> Output Class Initialized
+INFO - 2025-09-06 15:52:31 --> Security Class Initialized
+DEBUG - 2025-09-06 15:52:31 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:52:31 --> Input Class Initialized
+INFO - 2025-09-06 15:52:31 --> Language Class Initialized
+INFO - 2025-09-06 15:52:31 --> Loader Class Initialized
+INFO - 2025-09-06 15:52:31 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:52:31 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:52:31 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:52:31 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:52:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:52:31 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:52:31 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:52:31 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:52:31 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:52:31 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:52:31 --> Pagination Class Initialized
+INFO - 2025-09-06 15:52:31 --> Upload Class Initialized
+INFO - 2025-09-06 15:52:31 --> Email Class Initialized
+INFO - 2025-09-06 15:52:31 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:31 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:31 --> Controller Class Initialized
+INFO - 2025-09-06 15:52:31 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 15:52:31 --> Final output sent to browser
+DEBUG - 2025-09-06 15:52:31 --> Total execution time: 0.0595
+INFO - 2025-09-06 15:52:36 --> Config Class Initialized
+INFO - 2025-09-06 15:52:36 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:52:36 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:52:36 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:52:36 --> URI Class Initialized
+INFO - 2025-09-06 15:52:36 --> Router Class Initialized
+INFO - 2025-09-06 15:52:36 --> Output Class Initialized
+INFO - 2025-09-06 15:52:36 --> Security Class Initialized
+DEBUG - 2025-09-06 15:52:36 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:52:36 --> Input Class Initialized
+INFO - 2025-09-06 15:52:36 --> Language Class Initialized
+INFO - 2025-09-06 15:52:36 --> Loader Class Initialized
+INFO - 2025-09-06 15:52:36 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:52:36 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:52:36 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:52:36 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:52:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:52:36 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:52:36 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:52:36 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:52:36 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:52:36 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:52:36 --> Pagination Class Initialized
+INFO - 2025-09-06 15:52:36 --> Upload Class Initialized
+INFO - 2025-09-06 15:52:36 --> Email Class Initialized
+INFO - 2025-09-06 15:52:36 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:36 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:36 --> Controller Class Initialized
+INFO - 2025-09-06 15:52:36 --> Final output sent to browser
+DEBUG - 2025-09-06 15:52:36 --> Total execution time: 0.0721
+INFO - 2025-09-06 15:52:37 --> Config Class Initialized
+INFO - 2025-09-06 15:52:37 --> Hooks Class Initialized
+DEBUG - 2025-09-06 15:52:37 --> UTF-8 Support Enabled
+INFO - 2025-09-06 15:52:37 --> Utf8 Class Initialized
+INFO - 2025-09-06 15:52:37 --> URI Class Initialized
+INFO - 2025-09-06 15:52:37 --> Router Class Initialized
+INFO - 2025-09-06 15:52:37 --> Output Class Initialized
+INFO - 2025-09-06 15:52:37 --> Security Class Initialized
+DEBUG - 2025-09-06 15:52:37 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 15:52:37 --> Input Class Initialized
+INFO - 2025-09-06 15:52:37 --> Language Class Initialized
+INFO - 2025-09-06 15:52:37 --> Loader Class Initialized
+INFO - 2025-09-06 15:52:37 --> Helper loaded: url_helper
+INFO - 2025-09-06 15:52:37 --> Helper loaded: file_helper
+INFO - 2025-09-06 15:52:37 --> Helper loaded: akses_helper
+INFO - 2025-09-06 15:52:37 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 15:52:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 15:52:37 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 15:52:37 --> Image Lib Class Initialized
+INFO - 2025-09-06 15:52:37 --> Helper loaded: form_helper
+INFO - 2025-09-06 15:52:37 --> Form Validation Class Initialized
+INFO - 2025-09-06 15:52:37 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 15:52:37 --> Pagination Class Initialized
+INFO - 2025-09-06 15:52:37 --> Upload Class Initialized
+INFO - 2025-09-06 15:52:37 --> Email Class Initialized
+INFO - 2025-09-06 15:52:37 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:37 --> Model "M_data" initialized
+INFO - 2025-09-06 15:52:37 --> Controller Class Initialized
+INFO - 2025-09-06 15:52:37 --> Final output sent to browser
+DEBUG - 2025-09-06 15:52:37 --> Total execution time: 0.0783
+INFO - 2025-09-06 16:08:05 --> Config Class Initialized
+INFO - 2025-09-06 16:08:05 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:08:05 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:08:05 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:08:05 --> URI Class Initialized
+INFO - 2025-09-06 16:08:05 --> Router Class Initialized
+INFO - 2025-09-06 16:08:05 --> Output Class Initialized
+INFO - 2025-09-06 16:08:05 --> Security Class Initialized
+DEBUG - 2025-09-06 16:08:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:08:05 --> Input Class Initialized
+INFO - 2025-09-06 16:08:05 --> Language Class Initialized
+INFO - 2025-09-06 16:08:05 --> Loader Class Initialized
+INFO - 2025-09-06 16:08:05 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:08:05 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:08:05 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:08:05 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:08:05 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:08:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:08:05 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:08:05 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:08:05 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:08:05 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:08:05 --> Pagination Class Initialized
+INFO - 2025-09-06 16:08:05 --> Upload Class Initialized
+INFO - 2025-09-06 16:08:06 --> Email Class Initialized
+INFO - 2025-09-06 16:08:06 --> Model "M_data" initialized
+INFO - 2025-09-06 16:08:06 --> Model "M_data" initialized
+INFO - 2025-09-06 16:08:06 --> Controller Class Initialized
+INFO - 2025-09-06 16:08:06 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 16:08:06 --> Model "M_user" initialized
+INFO - 2025-09-06 16:08:06 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 16:08:06 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 16:08:06 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 16:08:06 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 16:08:06 --> Final output sent to browser
+DEBUG - 2025-09-06 16:08:06 --> Total execution time: 1.4049
+INFO - 2025-09-06 16:08:06 --> Config Class Initialized
+INFO - 2025-09-06 16:08:06 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:08:06 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:08:06 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:08:06 --> URI Class Initialized
+INFO - 2025-09-06 16:08:06 --> Router Class Initialized
+INFO - 2025-09-06 16:08:06 --> Output Class Initialized
+INFO - 2025-09-06 16:08:06 --> Security Class Initialized
+DEBUG - 2025-09-06 16:08:06 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:08:06 --> Input Class Initialized
+INFO - 2025-09-06 16:08:06 --> Language Class Initialized
+INFO - 2025-09-06 16:08:06 --> Loader Class Initialized
+INFO - 2025-09-06 16:08:06 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:08:06 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:08:06 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:08:06 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:08:06 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:08:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:08:06 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:08:06 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:08:06 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:08:06 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:08:06 --> Pagination Class Initialized
+INFO - 2025-09-06 16:08:06 --> Upload Class Initialized
+INFO - 2025-09-06 16:08:06 --> Email Class Initialized
+INFO - 2025-09-06 16:08:06 --> Model "M_data" initialized
+INFO - 2025-09-06 16:08:06 --> Model "M_data" initialized
+INFO - 2025-09-06 16:08:06 --> Controller Class Initialized
+INFO - 2025-09-06 16:08:06 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 16:08:06 --> Final output sent to browser
+DEBUG - 2025-09-06 16:08:06 --> Total execution time: 0.0772
+INFO - 2025-09-06 16:10:05 --> Config Class Initialized
+INFO - 2025-09-06 16:10:05 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:10:05 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:10:05 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:10:05 --> URI Class Initialized
+INFO - 2025-09-06 16:10:05 --> Router Class Initialized
+INFO - 2025-09-06 16:10:05 --> Output Class Initialized
+INFO - 2025-09-06 16:10:05 --> Security Class Initialized
+DEBUG - 2025-09-06 16:10:05 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:10:05 --> Input Class Initialized
+INFO - 2025-09-06 16:10:05 --> Language Class Initialized
+INFO - 2025-09-06 16:10:05 --> Loader Class Initialized
+INFO - 2025-09-06 16:10:05 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:10:05 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:10:05 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:10:05 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:10:05 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:10:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:10:05 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:10:05 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:10:05 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:10:05 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:10:05 --> Pagination Class Initialized
+INFO - 2025-09-06 16:10:05 --> Upload Class Initialized
+INFO - 2025-09-06 16:10:05 --> Email Class Initialized
+INFO - 2025-09-06 16:10:05 --> Model "M_data" initialized
+INFO - 2025-09-06 16:10:05 --> Model "M_data" initialized
+INFO - 2025-09-06 16:10:05 --> Controller Class Initialized
+INFO - 2025-09-06 16:10:05 --> Final output sent to browser
+DEBUG - 2025-09-06 16:10:05 --> Total execution time: 0.0777
+INFO - 2025-09-06 16:11:27 --> Config Class Initialized
+INFO - 2025-09-06 16:11:27 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:11:27 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:11:27 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:11:27 --> URI Class Initialized
+INFO - 2025-09-06 16:11:27 --> Router Class Initialized
+INFO - 2025-09-06 16:11:27 --> Output Class Initialized
+INFO - 2025-09-06 16:11:27 --> Security Class Initialized
+DEBUG - 2025-09-06 16:11:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:11:27 --> Input Class Initialized
+INFO - 2025-09-06 16:11:27 --> Language Class Initialized
+INFO - 2025-09-06 16:11:27 --> Loader Class Initialized
+INFO - 2025-09-06 16:11:27 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:11:27 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:11:27 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:11:27 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:11:27 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:11:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:11:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:11:27 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:11:27 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:11:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:11:27 --> Pagination Class Initialized
+INFO - 2025-09-06 16:11:27 --> Upload Class Initialized
+INFO - 2025-09-06 16:11:27 --> Email Class Initialized
+INFO - 2025-09-06 16:11:27 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:27 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:27 --> Controller Class Initialized
+INFO - 2025-09-06 16:11:27 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 16:11:27 --> Model "M_user" initialized
+INFO - 2025-09-06 16:11:27 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 16:11:27 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 16:11:27 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 16:11:27 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 16:11:27 --> Final output sent to browser
+DEBUG - 2025-09-06 16:11:27 --> Total execution time: 0.0689
+INFO - 2025-09-06 16:11:27 --> Config Class Initialized
+INFO - 2025-09-06 16:11:27 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:11:27 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:11:27 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:11:27 --> URI Class Initialized
+INFO - 2025-09-06 16:11:27 --> Router Class Initialized
+INFO - 2025-09-06 16:11:27 --> Output Class Initialized
+INFO - 2025-09-06 16:11:27 --> Security Class Initialized
+DEBUG - 2025-09-06 16:11:27 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:11:27 --> Input Class Initialized
+INFO - 2025-09-06 16:11:27 --> Language Class Initialized
+INFO - 2025-09-06 16:11:27 --> Loader Class Initialized
+INFO - 2025-09-06 16:11:27 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:11:27 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:11:27 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:11:27 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:11:27 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:11:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:11:27 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:11:27 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:11:27 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:11:27 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:11:27 --> Pagination Class Initialized
+INFO - 2025-09-06 16:11:27 --> Upload Class Initialized
+INFO - 2025-09-06 16:11:27 --> Email Class Initialized
+INFO - 2025-09-06 16:11:27 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:27 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:27 --> Controller Class Initialized
+INFO - 2025-09-06 16:11:27 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 16:11:27 --> Final output sent to browser
+DEBUG - 2025-09-06 16:11:27 --> Total execution time: 0.0755
+INFO - 2025-09-06 16:11:30 --> Config Class Initialized
+INFO - 2025-09-06 16:11:30 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:11:30 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:11:30 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:11:30 --> URI Class Initialized
+INFO - 2025-09-06 16:11:30 --> Router Class Initialized
+INFO - 2025-09-06 16:11:30 --> Output Class Initialized
+INFO - 2025-09-06 16:11:30 --> Security Class Initialized
+DEBUG - 2025-09-06 16:11:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:11:30 --> Input Class Initialized
+INFO - 2025-09-06 16:11:30 --> Language Class Initialized
+INFO - 2025-09-06 16:11:30 --> Loader Class Initialized
+INFO - 2025-09-06 16:11:30 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:11:30 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:11:30 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:11:30 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:11:30 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:11:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:11:30 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:11:30 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:11:30 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:11:30 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:11:30 --> Pagination Class Initialized
+INFO - 2025-09-06 16:11:30 --> Upload Class Initialized
+INFO - 2025-09-06 16:11:30 --> Email Class Initialized
+INFO - 2025-09-06 16:11:30 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:30 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:30 --> Controller Class Initialized
+INFO - 2025-09-06 16:11:30 --> Final output sent to browser
+DEBUG - 2025-09-06 16:11:30 --> Total execution time: 0.0764
+INFO - 2025-09-06 16:11:44 --> Config Class Initialized
+INFO - 2025-09-06 16:11:44 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:11:44 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:11:44 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:11:44 --> URI Class Initialized
+INFO - 2025-09-06 16:11:44 --> Router Class Initialized
+INFO - 2025-09-06 16:11:44 --> Output Class Initialized
+INFO - 2025-09-06 16:11:44 --> Security Class Initialized
+DEBUG - 2025-09-06 16:11:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:11:44 --> Input Class Initialized
+INFO - 2025-09-06 16:11:44 --> Language Class Initialized
+ERROR - 2025-09-06 16:11:44 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:11:44 --> Config Class Initialized
+INFO - 2025-09-06 16:11:44 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:11:44 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:11:44 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:11:44 --> URI Class Initialized
+INFO - 2025-09-06 16:11:44 --> Router Class Initialized
+INFO - 2025-09-06 16:11:44 --> Output Class Initialized
+INFO - 2025-09-06 16:11:44 --> Security Class Initialized
+DEBUG - 2025-09-06 16:11:44 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:11:44 --> Input Class Initialized
+INFO - 2025-09-06 16:11:44 --> Language Class Initialized
+ERROR - 2025-09-06 16:11:44 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:11:45 --> Config Class Initialized
+INFO - 2025-09-06 16:11:45 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:11:45 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:11:45 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:11:45 --> URI Class Initialized
+INFO - 2025-09-06 16:11:45 --> Router Class Initialized
+INFO - 2025-09-06 16:11:45 --> Output Class Initialized
+INFO - 2025-09-06 16:11:45 --> Security Class Initialized
+DEBUG - 2025-09-06 16:11:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:11:45 --> Input Class Initialized
+INFO - 2025-09-06 16:11:45 --> Language Class Initialized
+INFO - 2025-09-06 16:11:45 --> Loader Class Initialized
+INFO - 2025-09-06 16:11:45 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:11:45 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:11:46 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:11:46 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:11:46 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:11:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:11:46 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:11:46 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:11:46 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:11:46 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:11:46 --> Pagination Class Initialized
+INFO - 2025-09-06 16:11:46 --> Upload Class Initialized
+INFO - 2025-09-06 16:11:46 --> Email Class Initialized
+INFO - 2025-09-06 16:11:46 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:46 --> Model "M_data" initialized
+INFO - 2025-09-06 16:11:46 --> Controller Class Initialized
+DEBUG - 2025-09-06 16:11:46 --> Upload class already loaded. Second attempt ignored.
+INFO - 2025-09-06 16:11:46 --> Final output sent to browser
+DEBUG - 2025-09-06 16:11:46 --> Total execution time: 0.0928
+INFO - 2025-09-06 16:14:18 --> Config Class Initialized
+INFO - 2025-09-06 16:14:18 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:18 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:18 --> URI Class Initialized
+INFO - 2025-09-06 16:14:18 --> Router Class Initialized
+INFO - 2025-09-06 16:14:18 --> Output Class Initialized
+INFO - 2025-09-06 16:14:18 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:18 --> Input Class Initialized
+INFO - 2025-09-06 16:14:18 --> Language Class Initialized
+INFO - 2025-09-06 16:14:18 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:18 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:18 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:18 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:18 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:18 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:18 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:18 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:18 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:18 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:18 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:18 --> Email Class Initialized
+INFO - 2025-09-06 16:14:18 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:18 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:18 --> Controller Class Initialized
+INFO - 2025-09-06 16:14:18 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 16:14:18 --> Model "M_user" initialized
+INFO - 2025-09-06 16:14:18 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 16:14:18 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 16:14:18 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 16:14:18 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 16:14:18 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:18 --> Total execution time: 0.0866
+INFO - 2025-09-06 16:14:18 --> Config Class Initialized
+INFO - 2025-09-06 16:14:18 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:18 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:18 --> URI Class Initialized
+INFO - 2025-09-06 16:14:18 --> Router Class Initialized
+INFO - 2025-09-06 16:14:18 --> Output Class Initialized
+INFO - 2025-09-06 16:14:18 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:18 --> Input Class Initialized
+INFO - 2025-09-06 16:14:18 --> Language Class Initialized
+ERROR - 2025-09-06 16:14:18 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:14:18 --> Config Class Initialized
+INFO - 2025-09-06 16:14:18 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:18 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:18 --> URI Class Initialized
+INFO - 2025-09-06 16:14:18 --> Router Class Initialized
+INFO - 2025-09-06 16:14:18 --> Output Class Initialized
+INFO - 2025-09-06 16:14:18 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:18 --> Input Class Initialized
+INFO - 2025-09-06 16:14:18 --> Language Class Initialized
+ERROR - 2025-09-06 16:14:18 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:14:18 --> Config Class Initialized
+INFO - 2025-09-06 16:14:18 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:18 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:18 --> URI Class Initialized
+INFO - 2025-09-06 16:14:18 --> Router Class Initialized
+INFO - 2025-09-06 16:14:18 --> Output Class Initialized
+INFO - 2025-09-06 16:14:18 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:18 --> Input Class Initialized
+INFO - 2025-09-06 16:14:18 --> Language Class Initialized
+INFO - 2025-09-06 16:14:18 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:18 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:18 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:18 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:18 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:18 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:18 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:18 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:18 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:18 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:18 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:18 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:18 --> Email Class Initialized
+INFO - 2025-09-06 16:14:18 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:18 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:18 --> Controller Class Initialized
+INFO - 2025-09-06 16:14:18 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 16:14:18 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:18 --> Total execution time: 0.0561
+INFO - 2025-09-06 16:14:22 --> Config Class Initialized
+INFO - 2025-09-06 16:14:22 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:22 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:22 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:22 --> URI Class Initialized
+INFO - 2025-09-06 16:14:22 --> Router Class Initialized
+INFO - 2025-09-06 16:14:22 --> Output Class Initialized
+INFO - 2025-09-06 16:14:22 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:22 --> Input Class Initialized
+INFO - 2025-09-06 16:14:22 --> Language Class Initialized
+INFO - 2025-09-06 16:14:22 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:22 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:22 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:22 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:22 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:22 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:22 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:22 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:22 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:22 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:22 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:22 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:22 --> Email Class Initialized
+INFO - 2025-09-06 16:14:22 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:22 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:22 --> Controller Class Initialized
+INFO - 2025-09-06 16:14:22 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:22 --> Total execution time: 0.0709
+INFO - 2025-09-06 16:14:46 --> Config Class Initialized
+INFO - 2025-09-06 16:14:46 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:46 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:46 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:46 --> URI Class Initialized
+INFO - 2025-09-06 16:14:46 --> Router Class Initialized
+INFO - 2025-09-06 16:14:46 --> Output Class Initialized
+INFO - 2025-09-06 16:14:46 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:46 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:46 --> Input Class Initialized
+INFO - 2025-09-06 16:14:46 --> Language Class Initialized
+INFO - 2025-09-06 16:14:46 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:46 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:46 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:46 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:46 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:46 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:46 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:46 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:46 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:46 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:46 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:46 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:46 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:46 --> Email Class Initialized
+INFO - 2025-09-06 16:14:46 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:46 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:46 --> Controller Class Initialized
+INFO - 2025-09-06 16:14:46 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:46 --> Total execution time: 0.0720
+INFO - 2025-09-06 16:14:52 --> Config Class Initialized
+INFO - 2025-09-06 16:14:52 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:52 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:52 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:52 --> URI Class Initialized
+INFO - 2025-09-06 16:14:52 --> Router Class Initialized
+INFO - 2025-09-06 16:14:52 --> Output Class Initialized
+INFO - 2025-09-06 16:14:52 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:52 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:52 --> Input Class Initialized
+INFO - 2025-09-06 16:14:52 --> Language Class Initialized
+INFO - 2025-09-06 16:14:52 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:52 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:52 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:52 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:52 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:52 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:52 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:52 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:52 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:52 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:52 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:52 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:52 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:52 --> Email Class Initialized
+INFO - 2025-09-06 16:14:52 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:52 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:52 --> Controller Class Initialized
+DEBUG - 2025-09-06 16:14:52 --> Upload class already loaded. Second attempt ignored.
+INFO - 2025-09-06 16:14:52 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:52 --> Total execution time: 0.0948
+INFO - 2025-09-06 16:14:55 --> Config Class Initialized
+INFO - 2025-09-06 16:14:55 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:55 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:55 --> URI Class Initialized
+INFO - 2025-09-06 16:14:55 --> Router Class Initialized
+INFO - 2025-09-06 16:14:55 --> Output Class Initialized
+INFO - 2025-09-06 16:14:55 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:55 --> Input Class Initialized
+INFO - 2025-09-06 16:14:55 --> Language Class Initialized
+INFO - 2025-09-06 16:14:55 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:55 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:55 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:55 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:55 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:55 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:55 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:55 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:55 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:55 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:55 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:55 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:55 --> Email Class Initialized
+INFO - 2025-09-06 16:14:55 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:55 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:55 --> Controller Class Initialized
+INFO - 2025-09-06 16:14:55 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 16:14:55 --> Model "M_user" initialized
+INFO - 2025-09-06 16:14:55 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 16:14:55 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 16:14:55 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 16:14:55 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 16:14:55 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:55 --> Total execution time: 0.0767
+INFO - 2025-09-06 16:14:55 --> Config Class Initialized
+INFO - 2025-09-06 16:14:55 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:55 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:55 --> URI Class Initialized
+INFO - 2025-09-06 16:14:55 --> Router Class Initialized
+INFO - 2025-09-06 16:14:55 --> Output Class Initialized
+INFO - 2025-09-06 16:14:55 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:55 --> Input Class Initialized
+INFO - 2025-09-06 16:14:55 --> Language Class Initialized
+ERROR - 2025-09-06 16:14:55 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:14:55 --> Config Class Initialized
+INFO - 2025-09-06 16:14:55 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:55 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:55 --> URI Class Initialized
+INFO - 2025-09-06 16:14:55 --> Router Class Initialized
+INFO - 2025-09-06 16:14:55 --> Output Class Initialized
+INFO - 2025-09-06 16:14:55 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:55 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:55 --> Input Class Initialized
+INFO - 2025-09-06 16:14:55 --> Language Class Initialized
+ERROR - 2025-09-06 16:14:55 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:14:56 --> Config Class Initialized
+INFO - 2025-09-06 16:14:56 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:14:56 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:14:56 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:14:56 --> URI Class Initialized
+INFO - 2025-09-06 16:14:56 --> Router Class Initialized
+INFO - 2025-09-06 16:14:56 --> Output Class Initialized
+INFO - 2025-09-06 16:14:56 --> Security Class Initialized
+DEBUG - 2025-09-06 16:14:56 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:14:56 --> Input Class Initialized
+INFO - 2025-09-06 16:14:56 --> Language Class Initialized
+INFO - 2025-09-06 16:14:56 --> Loader Class Initialized
+INFO - 2025-09-06 16:14:56 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:14:56 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:14:56 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:14:56 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:14:56 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:14:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:14:56 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:14:56 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:14:56 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:14:56 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:14:56 --> Pagination Class Initialized
+INFO - 2025-09-06 16:14:56 --> Upload Class Initialized
+INFO - 2025-09-06 16:14:56 --> Email Class Initialized
+INFO - 2025-09-06 16:14:56 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:56 --> Model "M_data" initialized
+INFO - 2025-09-06 16:14:56 --> Controller Class Initialized
+INFO - 2025-09-06 16:14:56 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 16:14:56 --> Final output sent to browser
+DEBUG - 2025-09-06 16:14:56 --> Total execution time: 0.0644
+INFO - 2025-09-06 16:15:17 --> Config Class Initialized
+INFO - 2025-09-06 16:15:17 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:15:17 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:15:17 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:15:17 --> URI Class Initialized
+INFO - 2025-09-06 16:15:17 --> Router Class Initialized
+INFO - 2025-09-06 16:15:17 --> Output Class Initialized
+INFO - 2025-09-06 16:15:17 --> Security Class Initialized
+DEBUG - 2025-09-06 16:15:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:15:17 --> Input Class Initialized
+INFO - 2025-09-06 16:15:17 --> Language Class Initialized
+INFO - 2025-09-06 16:15:17 --> Loader Class Initialized
+INFO - 2025-09-06 16:15:17 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:15:17 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:15:17 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:15:17 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:15:17 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:15:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:15:17 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:15:17 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:15:17 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:15:17 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:15:17 --> Pagination Class Initialized
+INFO - 2025-09-06 16:15:17 --> Upload Class Initialized
+INFO - 2025-09-06 16:15:17 --> Email Class Initialized
+INFO - 2025-09-06 16:15:17 --> Model "M_data" initialized
+INFO - 2025-09-06 16:15:17 --> Model "M_data" initialized
+INFO - 2025-09-06 16:15:17 --> Controller Class Initialized
+INFO - 2025-09-06 16:15:17 --> Final output sent to browser
+DEBUG - 2025-09-06 16:15:17 --> Total execution time: 0.0801
+INFO - 2025-09-06 16:20:32 --> Config Class Initialized
+INFO - 2025-09-06 16:20:32 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:32 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:32 --> URI Class Initialized
+INFO - 2025-09-06 16:20:32 --> Router Class Initialized
+INFO - 2025-09-06 16:20:32 --> Output Class Initialized
+INFO - 2025-09-06 16:20:32 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:32 --> Input Class Initialized
+INFO - 2025-09-06 16:20:32 --> Language Class Initialized
+INFO - 2025-09-06 16:20:32 --> Loader Class Initialized
+INFO - 2025-09-06 16:20:32 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:20:32 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:20:32 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:20:32 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:20:32 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:20:32 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:20:32 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:20:32 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:20:32 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:20:32 --> Pagination Class Initialized
+INFO - 2025-09-06 16:20:32 --> Upload Class Initialized
+INFO - 2025-09-06 16:20:32 --> Email Class Initialized
+INFO - 2025-09-06 16:20:32 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:32 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:32 --> Controller Class Initialized
+INFO - 2025-09-06 16:20:32 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 16:20:32 --> Model "M_user" initialized
+INFO - 2025-09-06 16:20:32 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 16:20:32 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 16:20:32 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 16:20:32 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 16:20:32 --> Final output sent to browser
+DEBUG - 2025-09-06 16:20:32 --> Total execution time: 0.0580
+INFO - 2025-09-06 16:20:32 --> Config Class Initialized
+INFO - 2025-09-06 16:20:32 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:32 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:32 --> URI Class Initialized
+INFO - 2025-09-06 16:20:32 --> Router Class Initialized
+INFO - 2025-09-06 16:20:32 --> Output Class Initialized
+INFO - 2025-09-06 16:20:32 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:32 --> Input Class Initialized
+INFO - 2025-09-06 16:20:32 --> Language Class Initialized
+ERROR - 2025-09-06 16:20:32 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:20:32 --> Config Class Initialized
+INFO - 2025-09-06 16:20:32 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:32 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:32 --> URI Class Initialized
+INFO - 2025-09-06 16:20:32 --> Router Class Initialized
+INFO - 2025-09-06 16:20:32 --> Output Class Initialized
+INFO - 2025-09-06 16:20:32 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:32 --> Input Class Initialized
+INFO - 2025-09-06 16:20:32 --> Language Class Initialized
+ERROR - 2025-09-06 16:20:32 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:20:32 --> Config Class Initialized
+INFO - 2025-09-06 16:20:32 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:32 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:32 --> URI Class Initialized
+INFO - 2025-09-06 16:20:32 --> Router Class Initialized
+INFO - 2025-09-06 16:20:32 --> Output Class Initialized
+INFO - 2025-09-06 16:20:32 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:32 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:32 --> Input Class Initialized
+INFO - 2025-09-06 16:20:32 --> Language Class Initialized
+INFO - 2025-09-06 16:20:32 --> Loader Class Initialized
+INFO - 2025-09-06 16:20:32 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:20:32 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:20:32 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:20:32 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:20:32 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:20:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:20:33 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:20:33 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:20:33 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:20:33 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:20:33 --> Pagination Class Initialized
+INFO - 2025-09-06 16:20:33 --> Upload Class Initialized
+INFO - 2025-09-06 16:20:33 --> Email Class Initialized
+INFO - 2025-09-06 16:20:33 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:33 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:33 --> Controller Class Initialized
+INFO - 2025-09-06 16:20:33 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 16:20:33 --> Final output sent to browser
+DEBUG - 2025-09-06 16:20:33 --> Total execution time: 0.0514
+INFO - 2025-09-06 16:20:35 --> Config Class Initialized
+INFO - 2025-09-06 16:20:35 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:35 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:35 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:35 --> URI Class Initialized
+INFO - 2025-09-06 16:20:35 --> Router Class Initialized
+INFO - 2025-09-06 16:20:35 --> Output Class Initialized
+INFO - 2025-09-06 16:20:35 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:35 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:35 --> Input Class Initialized
+INFO - 2025-09-06 16:20:35 --> Language Class Initialized
+INFO - 2025-09-06 16:20:35 --> Loader Class Initialized
+INFO - 2025-09-06 16:20:35 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:20:35 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:20:35 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:20:35 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:20:35 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:20:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:20:35 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:20:35 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:20:35 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:20:35 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:20:35 --> Pagination Class Initialized
+INFO - 2025-09-06 16:20:35 --> Upload Class Initialized
+INFO - 2025-09-06 16:20:35 --> Email Class Initialized
+INFO - 2025-09-06 16:20:35 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:35 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:35 --> Controller Class Initialized
+INFO - 2025-09-06 16:20:35 --> Final output sent to browser
+DEBUG - 2025-09-06 16:20:35 --> Total execution time: 0.0681
+INFO - 2025-09-06 16:20:38 --> Config Class Initialized
+INFO - 2025-09-06 16:20:38 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:38 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:38 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:38 --> URI Class Initialized
+INFO - 2025-09-06 16:20:38 --> Router Class Initialized
+INFO - 2025-09-06 16:20:38 --> Output Class Initialized
+INFO - 2025-09-06 16:20:38 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:38 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:38 --> Input Class Initialized
+INFO - 2025-09-06 16:20:38 --> Language Class Initialized
+INFO - 2025-09-06 16:20:38 --> Loader Class Initialized
+INFO - 2025-09-06 16:20:38 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:20:38 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:20:38 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:20:38 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:20:38 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:20:38 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:20:38 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:20:38 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:20:38 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:20:38 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:20:38 --> Pagination Class Initialized
+INFO - 2025-09-06 16:20:38 --> Upload Class Initialized
+INFO - 2025-09-06 16:20:38 --> Email Class Initialized
+INFO - 2025-09-06 16:20:38 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:38 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:38 --> Controller Class Initialized
+DEBUG - 2025-09-06 16:20:38 --> Upload class already loaded. Second attempt ignored.
+INFO - 2025-09-06 16:20:38 --> Final output sent to browser
+DEBUG - 2025-09-06 16:20:38 --> Total execution time: 0.0706
+INFO - 2025-09-06 16:20:40 --> Config Class Initialized
+INFO - 2025-09-06 16:20:40 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:40 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:40 --> URI Class Initialized
+INFO - 2025-09-06 16:20:40 --> Router Class Initialized
+INFO - 2025-09-06 16:20:40 --> Output Class Initialized
+INFO - 2025-09-06 16:20:40 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:40 --> Input Class Initialized
+INFO - 2025-09-06 16:20:40 --> Language Class Initialized
+INFO - 2025-09-06 16:20:40 --> Loader Class Initialized
+INFO - 2025-09-06 16:20:40 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:20:40 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:20:40 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:20:40 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:20:40 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:20:40 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:20:40 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:20:40 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:20:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:20:40 --> Pagination Class Initialized
+INFO - 2025-09-06 16:20:40 --> Upload Class Initialized
+INFO - 2025-09-06 16:20:40 --> Email Class Initialized
+INFO - 2025-09-06 16:20:40 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:40 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:40 --> Controller Class Initialized
+INFO - 2025-09-06 16:20:40 --> File loaded: E:\server2\htdocs\paspor\application\views\template/header.php
+INFO - 2025-09-06 16:20:40 --> Model "M_user" initialized
+INFO - 2025-09-06 16:20:40 --> File loaded: E:\server2\htdocs\paspor\application\views\template/navbar.php
+INFO - 2025-09-06 16:20:40 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/index.php
+INFO - 2025-09-06 16:20:40 --> File loaded: E:\server2\htdocs\paspor\application\views\template/footer.php
+INFO - 2025-09-06 16:20:40 --> File loaded: E:\server2\htdocs\paspor\application\views\template/conten.php
+INFO - 2025-09-06 16:20:40 --> Final output sent to browser
+DEBUG - 2025-09-06 16:20:40 --> Total execution time: 0.0655
+INFO - 2025-09-06 16:20:40 --> Config Class Initialized
+INFO - 2025-09-06 16:20:40 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:40 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:40 --> URI Class Initialized
+INFO - 2025-09-06 16:20:40 --> Router Class Initialized
+INFO - 2025-09-06 16:20:40 --> Output Class Initialized
+INFO - 2025-09-06 16:20:40 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:40 --> Input Class Initialized
+INFO - 2025-09-06 16:20:40 --> Language Class Initialized
+ERROR - 2025-09-06 16:20:40 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:20:40 --> Config Class Initialized
+INFO - 2025-09-06 16:20:40 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:40 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:40 --> URI Class Initialized
+INFO - 2025-09-06 16:20:40 --> Router Class Initialized
+INFO - 2025-09-06 16:20:40 --> Output Class Initialized
+INFO - 2025-09-06 16:20:40 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:40 --> Input Class Initialized
+INFO - 2025-09-06 16:20:40 --> Language Class Initialized
+ERROR - 2025-09-06 16:20:40 --> 404 Page Not Found: Assets/template
+INFO - 2025-09-06 16:20:40 --> Config Class Initialized
+INFO - 2025-09-06 16:20:40 --> Hooks Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> UTF-8 Support Enabled
+INFO - 2025-09-06 16:20:40 --> Utf8 Class Initialized
+INFO - 2025-09-06 16:20:40 --> URI Class Initialized
+INFO - 2025-09-06 16:20:40 --> Router Class Initialized
+INFO - 2025-09-06 16:20:40 --> Output Class Initialized
+INFO - 2025-09-06 16:20:40 --> Security Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2025-09-06 16:20:40 --> Input Class Initialized
+INFO - 2025-09-06 16:20:40 --> Language Class Initialized
+INFO - 2025-09-06 16:20:40 --> Loader Class Initialized
+INFO - 2025-09-06 16:20:40 --> Helper loaded: url_helper
+INFO - 2025-09-06 16:20:40 --> Helper loaded: file_helper
+INFO - 2025-09-06 16:20:40 --> Helper loaded: akses_helper
+INFO - 2025-09-06 16:20:40 --> Helper loaded: form_helper
+INFO - 2025-09-06 16:20:40 --> Database Driver Class Initialized
+DEBUG - 2025-09-06 16:20:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2025-09-06 16:20:40 --> Session: Class initialized using 'files' driver.
+INFO - 2025-09-06 16:20:40 --> Image Lib Class Initialized
+INFO - 2025-09-06 16:20:40 --> Form Validation Class Initialized
+INFO - 2025-09-06 16:20:40 --> Language file loaded: language/english/pagination_lang.php
+INFO - 2025-09-06 16:20:40 --> Pagination Class Initialized
+INFO - 2025-09-06 16:20:40 --> Upload Class Initialized
+INFO - 2025-09-06 16:20:40 --> Email Class Initialized
+INFO - 2025-09-06 16:20:40 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:40 --> Model "M_data" initialized
+INFO - 2025-09-06 16:20:40 --> Controller Class Initialized
+INFO - 2025-09-06 16:20:40 --> File loaded: E:\server2\htdocs\paspor\application\views\paspor/paspor-table.php
+INFO - 2025-09-06 16:20:40 --> Final output sent to browser
+DEBUG - 2025-09-06 16:20:40 --> Total execution time: 0.0578

@@ -80,4 +80,65 @@ class Paspor extends CI_Controller
 
         echo json_encode($data);
     }
+
+    public function simpan()
+    {
+        $nama        = $this->input->post('nama');
+        $kode_negara = $this->input->post('negara');
+        $asal_negara = $this->input->post('asal_negara');
+
+        // konfigurasi upload
+        $config['upload_path']   = './assets/upload/paspor/';
+        $config['allowed_types'] = 'jpg|jpeg|png|gif';
+        $config['max_size']      = 2048;
+
+        $this->load->library('upload', $config);
+
+        // upload foto
+        $filefoto = null;
+        if (!empty($_FILES['filefoto']['name'])) {
+            $config['file_name'] = time() . '_foto';
+            $this->upload->initialize($config);
+            if ($this->upload->do_upload('filefoto')) {
+                $filefoto = $this->upload->data('file_name');
+            } else {
+                echo json_encode([
+                    'status'  => 'error',
+                    'message' => strip_tags($this->upload->display_errors())
+                ]);
+                return;
+            }
+        }
+
+        // upload stempel
+        $filestempel = null;
+        if (!empty($_FILES['filestempel']['name'])) {
+            $config['file_name'] = time() . '_stempel';
+            $this->upload->initialize($config);
+            if ($this->upload->do_upload('filestempel')) {
+                $filestempel = $this->upload->data('file_name');
+            } else {
+                echo json_encode([
+                    'status'  => 'error',
+                    'message' => strip_tags($this->upload->display_errors())
+                ]);
+                return;
+            }
+        }
+
+        $data = [
+            'nama'        => $nama,
+            'kode_negara' => $kode_negara,
+            'asal_negara' => $asal_negara,
+            'filefoto'    => $filefoto,
+            'filestempel' => $filestempel
+        ];
+
+        $this->db->insert('tbl_paspor', $data);
+
+        echo json_encode([
+            'status'  => 'success',
+            'message' => 'Data paspor berhasil disimpan!'
+        ]);
+    }
 }

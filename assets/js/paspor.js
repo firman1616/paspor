@@ -13,12 +13,20 @@ $(document).ready(function () {
 
         // tampilkan Foto & Stempel kalau negara Rusia
         let fotoStempelGroup = document.getElementById('fotoStempelGroup');
+        let fileFotoInput = document.getElementById('filefoto');
+        let fileStempelInput = document.getElementById('filestempel');
+
         if (locale === "ru_RU") {
             fotoStempelGroup.style.display = "flex";
+            fileFotoInput.setAttribute("required", true);
+            fileStempelInput.setAttribute("required", true);
         } else {
             fotoStempelGroup.style.display = "none";
+            fileFotoInput.removeAttribute("required");
+            fileStempelInput.removeAttribute("required");
         }
-        
+
+        // isi asal_negara dengan teks yang dipilih
         let selectedText = this.options[this.selectedIndex].text;
         document.getElementById('asal_negara').value = selectedText;
 
@@ -39,6 +47,48 @@ $(document).ready(function () {
                 })
                 .catch(err => console.error("Error:", err));
         }
+    });
+
+
+    // simpan data
+    $('#formTambahPaspor').on('submit', function (e) {
+        e.preventDefault();
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            url: BASE_URL + "Paspor/simpan",
+            type: "POST",
+            data: formData,
+            contentType: false,
+            processData: false,
+            dataType: "json",
+            success: function (response) {
+                if (response.status === 'success') {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil',
+                        text: response.message
+                    }).then(() => {
+                        // reload halaman atau reset form
+                        location.reload();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal',
+                        text: response.message
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Terjadi kesalahan sistem: ' + error
+                });
+            }
+        });
     });
 
 

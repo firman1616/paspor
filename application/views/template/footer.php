@@ -44,7 +44,7 @@
 <script src="<?= base_url() ?>assets/template/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
 
 <!-- Sweet Alert -->
-<script src="<?= base_url() ?>assets/template/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Atlantis JS -->
 <script src="<?= base_url() ?>assets/template/assets/js/atlantis.min.js"></script>
