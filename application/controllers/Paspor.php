@@ -27,9 +27,9 @@ class Paspor extends CI_Controller
 
     function tablePaspor()
     {
-        // $data['modul'] = $this->m_data->get_data('tbl_modul')->result();
+        $data['paspor'] = $this->m_data->get_data('tbl_paspor')->result();
 
-        echo json_encode($this->load->view('paspor/paspor-table', false));
+        echo json_encode($this->load->view('paspor/paspor-table',$data, false));
     }
 
     private function getCountryName($locale)
