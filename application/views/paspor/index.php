@@ -62,14 +62,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" id="fotoStempelGroup" style="display: none;">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="nama">Foto</label>
                                 <input type="file" class="form-control" id="filefoto" name="filefoto">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" id="stempelGroup" style="display: none;">
                             <div class="form-group">
                                 <label for="icon">Stempel</label>
                                 <input type="file" class="form-control" id="filestempel" name="filestempel">

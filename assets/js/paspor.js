@@ -11,18 +11,19 @@ $(document).ready(function () {
     document.getElementById('negara').addEventListener('change', function () {
         let locale = this.value;
 
-        // tampilkan Foto & Stempel kalau negara Rusia
-        let fotoStempelGroup = document.getElementById('fotoStempelGroup');
         let fileFotoInput = document.getElementById('filefoto');
+        let stempelGroup = document.getElementById('stempelGroup');
         let fileStempelInput = document.getElementById('filestempel');
 
         if (locale === "ru_RU") {
-            fotoStempelGroup.style.display = "flex";
+            // Rusia: foto wajib, stempel muncul & wajib
             fileFotoInput.setAttribute("required", true);
+            stempelGroup.style.display = "block";
             fileStempelInput.setAttribute("required", true);
         } else {
-            fotoStempelGroup.style.display = "none";
+            // selain Rusia: foto tidak wajib, stempel hilang
             fileFotoInput.removeAttribute("required");
+            stempelGroup.style.display = "none";
             fileStempelInput.removeAttribute("required");
         }
 
@@ -48,6 +49,7 @@ $(document).ready(function () {
                 .catch(err => console.error("Error:", err));
         }
     });
+
 
 
     // simpan data
