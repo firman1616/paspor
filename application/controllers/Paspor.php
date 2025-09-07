@@ -118,9 +118,13 @@ class Paspor extends CI_Controller
 
     public function simpan()
     {
-        $nama        = $this->input->post('nama');
-        $kode_negara = $this->input->post('negara');
-        $asal_negara = $this->input->post('asal_negara');
+        $kode_negara  = $this->input->post('negara');
+        $nama_depan   = $this->input->post('nama_depan');
+        $nama_belakang = $this->input->post('nama_belakang');
+        $tempat_lahir = $this->input->post('tempat_lahir');
+        $asal_negara  = $this->input->post('asal_negara');
+        $tgl_lahir    = $this->input->post('tgl_lahir');
+        $gender       = $this->input->post('gender');
 
         // konfigurasi upload
         $config['upload_path']   = './assets/upload/paspor/';
@@ -161,12 +165,17 @@ class Paspor extends CI_Controller
             }
         }
 
+        // data yang disimpan
         $data = [
-            'nama'        => $nama,
-            'kode_negara' => $kode_negara,
-            'asal_negara' => $asal_negara,
-            'filefoto'    => $filefoto,
-            'filestempel' => $filestempel
+            'kode_negara'  => $kode_negara,
+            'nama_depan'   => $nama_depan,
+            'nama_belakang' => $nama_belakang,
+            'tempat_lahir' => $tempat_lahir,
+            'asal_negara'  => $asal_negara,
+            'tgl_lahir'    => $tgl_lahir,
+            'gender'       => $gender,
+            'filefoto'     => $filefoto,
+            'filestempel'  => $filestempel
         ];
 
         $this->db->insert('tbl_paspor', $data);

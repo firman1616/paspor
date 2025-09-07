@@ -13,7 +13,7 @@
         foreach ($paspor as $row) { ?>
         <tr>
             <td><?= $x++; ?></td>
-            <td><?= $row->nama ?></td>
+            <td><?= $row->nama_depan. ' '. $row->nama_belakang ?></td>
             <td><?= $row->asal_negara ?></td>
             <td>
                 <button type="button" class="btn btn-primary btn-sm print"  data-id="<?= $row->id ?>"><i class="fa fa-print"></i></button>
