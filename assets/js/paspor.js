@@ -54,10 +54,14 @@ $(document).ready(function () {
                     if (data.tgl_lahir) {
                         document.getElementById('tgl_lahir').value = data.tgl_lahir;
                     }
+                    if (data.gender) {
+                        document.getElementById('gender').value = data.gender;
+                    }
                 })
                 .catch(err => console.error("Error:", err));
         }
     });
+
 
     // simpan data
     $('#formTambahPaspor').on('submit', function (e) {

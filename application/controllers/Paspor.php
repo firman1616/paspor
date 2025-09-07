@@ -93,35 +93,28 @@ class Paspor extends CI_Controller
         // ambil nama depan (kata pertama)
         $nama_depan = $parts[0];
 
-        // ambil nama belakang (kata terakhir)
+        // ambil nama belakang (kata terakhir saja, buang kalau ada nama tengah)
         $nama_belakang = count($parts) > 1 ? $parts[count($parts) - 1] : '';
 
-        // tempat lahir → cek apakah faker punya method city
-        // try {
-        //     $tempat_lahir = $faker->city;        // atau $faker->city()
-        // } catch (\InvalidArgumentException $e) {
-        //     try {
-        //         $tempat_lahir = $faker->state;   // atau $faker->state()
-        //     } catch (\InvalidArgumentException $e2) {
-        //         try {
-        //             $tempat_lahir = $faker->country; // atau $faker->country()
-        //         } catch (\InvalidArgumentException $e3) {
-        //             $tempat_lahir = 'Tidak diketahui';
-        //         }
-        //     }
-        // }
+        // tempat lahir (fallback jika city tidak ada)
         $tempat_lahir = $this->fakerFirstAvailable($faker, ['city', 'state', 'region', 'county', 'country']);
 
         // generate tanggal lahir (umur antara 18 - 50)
         $tgl_lahir = $faker->dateTimeBetween('-50 years', '-18 years')->format('Y-m-d');
+
+        // gender hanya M/F
+        $genderFull = $faker->randomElement(['male', 'female']);
+        $gender = ($genderFull === 'male') ? 'M' : 'F';
 
         echo json_encode([
             'nama_depan'    => $nama_depan,
             'nama_belakang' => $nama_belakang,
             'tempat_lahir'  => $tempat_lahir,
             'tgl_lahir'     => $tgl_lahir,
+            'gender'        => $gender
         ]);
     }
+
 
     public function simpan()
     {
