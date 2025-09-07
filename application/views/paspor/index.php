@@ -51,14 +51,40 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama" required>
+                                <label for="nama">Nama Depan</label>
+                                <input type="text" class="form-control" id="nama_depan" name="nama_depan" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label for="nama">Nama Belakang</label>
+                                <input type="text" class="form-control" id="nama_belakang" name="nama_belakang" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="icon">Tempat Lahir</label>
+                                <input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
                                 <label for="icon">Asal Negara</label>
                                 <input type="text" class="form-control" id="asal_negara" name="asal_negara">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="icon">Tanggal Lahir</label>
+                                <input type="text" class="form-control" id="tgl_lahir" name="tgl_lahir">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="icon">Gender</label>
+                                <input type="text" class="form-control" id="gender" name="gender">
                             </div>
                         </div>
                     </div>

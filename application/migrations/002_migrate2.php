@@ -45,9 +45,23 @@ class Migration_Migrate2 extends CI_Migration
                 'unsigned'       => TRUE,
                 'auto_increment' => TRUE
             ],
-            'nama' => [
+            'nama_depan' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
+                'null'       => FALSE
+            ],
+            'nama_belakang' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => FALSE
+            ],
+            'tgl_lahir' => [
+                'type'       => 'DATE',
+                'null'       => FALSE
+            ],
+            'gender' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '10',
                 'null'       => FALSE
             ],
             'kode_negara' => [
@@ -55,9 +69,22 @@ class Migration_Migrate2 extends CI_Migration
                 'constraint' => '100',
                 'null'       => FALSE
             ],
+            'tempat_lahir' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => FALSE
+            ],
             'asal_negara' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
+                'null'       => FALSE
+            ],
+            'tgl_dibuat' => [
+                'type'       => 'DATE',
+                'null'       => FALSE
+            ],
+            'tgl_exp' => [
+                'type'       => 'DATE',
                 'null'       => FALSE
             ],
             'filefoto' => [

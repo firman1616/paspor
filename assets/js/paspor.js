@@ -27,13 +27,13 @@ $(document).ready(function () {
             fileStempelInput.removeAttribute("required");
         }
 
-        // isi asal_negara dengan teks yang dipilih
+        // isi asal_negara langsung dari option
         let selectedText = this.options[this.selectedIndex].text;
         document.getElementById('asal_negara').value = selectedText;
 
-        // tetap jalankan faker generate nama
+        // panggil Faker generate data
         if (locale) {
-            fetch(BASE_URL + "paspor/generateNama", {
+            fetch(BASE_URL + "Paspor/generateNama", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"
@@ -42,15 +42,22 @@ $(document).ready(function () {
             })
                 .then(response => response.json())
                 .then(data => {
-                    if (data.nama) {
-                        document.getElementById('nama').value = data.nama;
+                    if (data.nama_depan) {
+                        document.getElementById('nama_depan').value = data.nama_depan;
+                    }
+                    if (data.nama_belakang) {
+                        document.getElementById('nama_belakang').value = data.nama_belakang;
+                    }
+                    if (data.tempat_lahir) {
+                        document.getElementById('tempat_lahir').value = data.tempat_lahir;
+                    }
+                    if (data.tgl_lahir) {
+                        document.getElementById('tgl_lahir').value = data.tgl_lahir;
                     }
                 })
                 .catch(err => console.error("Error:", err));
         }
     });
-
-
 
     // simpan data
     $('#formTambahPaspor').on('submit', function (e) {

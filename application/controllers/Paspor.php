@@ -29,7 +29,7 @@ class Paspor extends CI_Controller
     {
         $data['paspor'] = $this->m_data->get_data('tbl_paspor')->result();
 
-        echo json_encode($this->load->view('paspor/paspor-table',$data, false));
+        echo json_encode($this->load->view('paspor/paspor-table', $data, false));
     }
 
     private function getCountryName($locale)
@@ -61,24 +61,66 @@ class Paspor extends CI_Controller
         ];
     }
 
+    private function fakerFirstAvailable(\Faker\Generator $faker, array $formatters)
+    {
+        foreach ($formatters as $fmt) {
+            try {
+                // panggil formatter apa pun (city, state, dst.)
+                return $faker->format($fmt);   // setara dengan $faker->{$fmt}()
+            } catch (\InvalidArgumentException $e) {
+                continue;
+            }
+        }
+        return 'Tidak diketahui';
+    }
+
     public function generateNama()
     {
-        $locale = $this->input->post('locale'); // misal ru_RU, id_ID, dll
-
+        $locale = $this->input->post('locale');
         if (!$locale) {
             echo json_encode(['error' => 'Locale tidak ditemukan']);
             return;
         }
 
-        // load faker
-        require_once FCPATH . 'vendor/autoload.php';
         $faker = Faker\Factory::create($locale);
 
-        $data = [
-            'nama' => $faker->name,
-        ];
+        // generate nama lengkap
+        $fullName = $faker->name;
 
-        echo json_encode($data);
+        // pecah berdasarkan spasi
+        $parts = explode(" ", $fullName);
+
+        // ambil nama depan (kata pertama)
+        $nama_depan = $parts[0];
+
+        // ambil nama belakang (kata terakhir)
+        $nama_belakang = count($parts) > 1 ? $parts[count($parts) - 1] : '';
+
+        // tempat lahir → cek apakah faker punya method city
+        // try {
+        //     $tempat_lahir = $faker->city;        // atau $faker->city()
+        // } catch (\InvalidArgumentException $e) {
+        //     try {
+        //         $tempat_lahir = $faker->state;   // atau $faker->state()
+        //     } catch (\InvalidArgumentException $e2) {
+        //         try {
+        //             $tempat_lahir = $faker->country; // atau $faker->country()
+        //         } catch (\InvalidArgumentException $e3) {
+        //             $tempat_lahir = 'Tidak diketahui';
+        //         }
+        //     }
+        // }
+        $tempat_lahir = $this->fakerFirstAvailable($faker, ['city', 'state', 'region', 'county', 'country']);
+
+        // generate tanggal lahir (umur antara 18 - 50)
+        $tgl_lahir = $faker->dateTimeBetween('-50 years', '-18 years')->format('Y-m-d');
+
+        echo json_encode([
+            'nama_depan'    => $nama_depan,
+            'nama_belakang' => $nama_belakang,
+            'tempat_lahir'  => $tempat_lahir,
+            'tgl_lahir'     => $tgl_lahir,
+        ]);
     }
 
     public function simpan()
