@@ -57,6 +57,12 @@ $(document).ready(function () {
                     if (data.gender) {
                         document.getElementById('gender').value = data.gender;
                     }
+                    if (data.nama_depan_en) {
+                        document.getElementById('nama_depan_en').value = data.nama_depan_en;
+                    }
+                    if (data.nama_belakang_en) {
+                        document.getElementById('nama_belakang_en').value = data.nama_belakang_en;
+                    }
                 })
                 .catch(err => console.error("Error:", err));
         }

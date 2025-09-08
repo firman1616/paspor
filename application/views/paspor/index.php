@@ -50,16 +50,16 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="nama">Nama Depan</label>
-                                <input type="text" class="form-control" id="nama_depan" name="nama_depan" required>
-                            </div>
+                            <label>Nama Depan (Asli)</label>
+                            <input type="text" class="form-control" id="nama_depan" name="nama_depan" required>
+                            <label>Nama Depan (EN)</label>
+                            <input type="text" class="form-control" id="nama_depan_en" name="nama_depan_en" readonly>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="nama">Nama Belakang</label>
-                                <input type="text" class="form-control" id="nama_belakang" name="nama_belakang" required>
-                            </div>
+                            <label>Nama Belakang (Asli)</label>
+                            <input type="text" class="form-control" id="nama_belakang" name="nama_belakang" required>
+                            <label>Nama Belakang (EN)</label>
+                            <input type="text" class="form-control" id="nama_belakang_en" name="nama_belakang_en" readonly>
                         </div>
                     </div>
                     <div class="row">
