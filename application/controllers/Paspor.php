@@ -264,4 +264,51 @@ class Paspor extends CI_Controller
             'message' => 'Data paspor berhasil disimpan!'
         ]);
     }
+
+    public function print($id)
+    {
+        // ambil data dari database
+        $paspor = $this->db->get_where('tbl_paspor', ['id' => $id])->row();
+        if (!$paspor) {
+            show_error("Data tidak ditemukan");
+            return;
+        }
+
+        // isi konten html
+        $html = "
+    <h2 style='text-align:center;'>Data Paspor</h2>
+    <table border='1' cellpadding='6' cellspacing='0' width='100%'>
+        <tr>
+            <td><b>Nama Depan</b></td>
+            <td>{$paspor->nama_depan}</td>
+        </tr>
+        <tr>
+            <td><b>Nama Belakang</b></td>
+            <td>{$paspor->nama_belakang}</td>
+        </tr>
+        <tr>
+            <td><b>Negara</b></td>
+            <td>{$paspor->asal_negara}</td>
+        </tr>
+        <tr>
+            <td><b>Tempat Lahir</b></td>
+            <td>{$paspor->tempat_lahir}</td>
+        </tr>
+        <tr>
+            <td><b>Tanggal Lahir</b></td>
+            <td>{$paspor->tgl_lahir}</td>
+        </tr>
+        <tr>
+            <td><b>Gender</b></td>
+            <td>{$paspor->gender}</td>
+        </tr>
+    </table>";
+
+        // load library Pdf
+        $this->load->library('pdf');
+        $mpdf = $this->pdf->load(); // sekarang bisa dipanggil
+
+        $mpdf->WriteHTML($html);
+        $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
+    }
 }

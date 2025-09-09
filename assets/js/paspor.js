@@ -8,6 +8,12 @@ $(document).ready(function () {
         // $("#modalTambah").modal("show"); // bootstrap 5 juga sama
     });
 
+    $(document).on('click', '.print', function () {
+        let id = $(this).data('id');
+        window.open(BASE_URL + "Paspor/print/" + id, "_blank");
+    });
+
+
     document.getElementById('negara').addEventListener('change', function () {
         let locale = this.value;
 
