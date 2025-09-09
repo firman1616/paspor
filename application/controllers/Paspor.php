@@ -200,6 +200,8 @@ class Paspor extends CI_Controller
         $asal_negara  = $this->input->post('asal_negara');
         $tgl_lahir    = $this->input->post('tgl_lahir');
         $gender       = $this->input->post('gender');
+        $nama_depan_trans       = $this->input->post('nama_depan_en');
+        $nama_belakang_trans       = $this->input->post('nama_belakang_en');
 
         // konfigurasi upload
         $config['upload_path']   = './assets/upload/paspor/';
@@ -250,7 +252,9 @@ class Paspor extends CI_Controller
             'tgl_lahir'    => $tgl_lahir,
             'gender'       => $gender,
             'filefoto'     => $filefoto,
-            'filestempel'  => $filestempel
+            'filestempel'  => $filestempel,
+            'nama_depan_trans'  => $nama_depan_trans,
+            'nama_belakang_trans'  => $nama_belakang_trans
         ];
 
         $this->db->insert('tbl_paspor', $data);

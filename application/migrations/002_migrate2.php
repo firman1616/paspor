@@ -50,7 +50,17 @@ class Migration_Migrate2 extends CI_Migration
                 'constraint' => '100',
                 'null'       => FALSE
             ],
+            'nama_depan_trans' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => FALSE
+            ],
             'nama_belakang' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => FALSE
+            ],
+            'nama_belakang_trans' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
                 'null'       => FALSE
