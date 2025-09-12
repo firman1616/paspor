@@ -110,6 +110,10 @@
                             </div>
                         </div>
                     </div>
+                    <canvas id="signature-pad" width="400" height="200" style="border:1px solid #000"></canvas>
+                    <input type="hidden" name="signature" id="signature">
+                    <br>
+                    <button id="clear" type="button" class="btn btn-warning">Clear</button>
                     <div class="modal-footer">
                         <button type="submit" form="formTambahPaspor" class="btn btn-primary">Simpan</button>
                     </div>

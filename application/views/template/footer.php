@@ -62,6 +62,7 @@
 <!-- DataTables Buttons JS -->
 <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.bootstrap4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.5/dist/signature_pad.umd.min.js"></script>
 
 
 <script src="<?= base_url() ?>assets/other/select2.min.js"></script>

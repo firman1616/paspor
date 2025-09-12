@@ -110,13 +110,17 @@ class Migration_Migrate2 extends CI_Migration
                 'type'       => 'text',
                 'null'       => FALSE
             ],
+            'signature' => [
+                'type'       => 'text',
+                'null'       => FALSE
+            ],
         ]);
         $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('tbl_paspor', TRUE);
 
         // insert modul
         $this->db->insert('tbl_modul', [
-            'nama'      => 'Paspor',
+            'name'      => 'Paspor',
             'icon'      => 'fas fa-passport',
             'url_modul' => 'Paspor'
         ]);

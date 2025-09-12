@@ -246,6 +246,18 @@ class Paspor extends CI_Controller
             }
         }
 
+        $signatureBase64 = $this->input->post('signature');
+
+        $signatureFile = null;
+        if ($signatureBase64) {
+            $signatureBase64 = str_replace('data:image/png;base64,', '', $signatureBase64);
+            $signatureBase64 = str_replace(' ', '+', $signatureBase64);
+            $signatureData = base64_decode($signatureBase64);
+
+            $signatureFile = time() . '_signature.png';
+            file_put_contents(FCPATH . 'assets/upload/paspor/' . $signatureFile, $signatureData);
+        }
+
         // data yang disimpan
         $data = [
             'kode_negara'  => $kode_negara,
@@ -259,7 +271,8 @@ class Paspor extends CI_Controller
             'filefoto'     => $filefoto,
             'filestempel'  => $filestempel,
             'nama_depan_trans'  => $nama_depan_trans,
-            'nama_belakang_trans'  => $nama_belakang_trans
+            'nama_belakang_trans'  => $nama_belakang_trans,
+            'signature'            => $signatureFile, // simpan nama file
         ];
 
         $this->db->insert('tbl_paspor', $data);
@@ -291,6 +304,18 @@ class Paspor extends CI_Controller
         return $depan . ' ' . $belakang;
     }
 
+    private function generateNumbFooter()
+    {
+        // 2 angka depan
+        $depan = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+        // 7 angka belakang
+        $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+        // gabungkan dengan spasi
+        return $depan . 'M' . $belakang;
+    }
+
 
 
     public function print($id)
@@ -304,6 +329,7 @@ class Paspor extends CI_Controller
 
         $kodeOMC = $this->generateKodeOMC();
         $noPaspor = $this->generateNoPaspor();
+        $noFooter = $this->generateNumbFooter();
 
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/rusia.png');
@@ -312,8 +338,9 @@ class Paspor extends CI_Controller
         $html = $this->load->view('paspor/paspor_rusia', [
             'paspor'     => $paspor,
             'background' => $background,
-            'kodeOMC'  => $kodeOMC,
-            'noPaspor'  => $noPaspor
+            'kodeOMC'    => $kodeOMC,
+            'noPaspor'   => $noPaspor,
+            'noFooter'   => $noFooter
         ], true);
 
         // load library Pdf
