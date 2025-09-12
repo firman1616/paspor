@@ -69,6 +69,9 @@ $(document).ready(function () {
                     if (data.nama_belakang_en) {
                         document.getElementById('nama_belakang_en').value = data.nama_belakang_en;
                     }
+                    if (data.tempat_lahir_en) {
+                        document.getElementById('tempat_lahir_en').value = data.tempat_lahir_en;
+                    }
                 })
                 .catch(err => console.error("Error:", err));
         }

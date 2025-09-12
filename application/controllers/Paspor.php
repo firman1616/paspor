@@ -164,6 +164,7 @@ class Paspor extends CI_Controller
 
         $nama_depan = $parts[0];
         $nama_belakang = count($parts) > 1 ? $parts[count($parts) - 1] : '';
+        $tempat_lahir = $parts[0];
 
         $nama_depan_en = $nama_depan;
         $nama_belakang_en = $nama_belakang;
@@ -172,6 +173,7 @@ class Paspor extends CI_Controller
         if ($locale === "ru_RU") {
             $nama_depan_en = $this->transliterateRussian($nama_depan);
             $nama_belakang_en = $this->transliterateRussian($nama_belakang);
+            $tempat_lahir_en = $this->transliterateRussian($tempat_lahir);
         }
 
         $tempat_lahir = $this->fakerFirstAvailable($faker, ['city', 'state', 'region', 'county', 'country']);
@@ -184,6 +186,7 @@ class Paspor extends CI_Controller
             'nama_depan_en'    => $nama_depan_en,
             'nama_belakang_en' => $nama_belakang_en,
             'tempat_lahir'     => $tempat_lahir,
+            'tempat_lahir_en'        => $tempat_lahir_en,
             'tgl_lahir'        => $tgl_lahir,
             'gender'           => $gender
         ]);
@@ -197,6 +200,7 @@ class Paspor extends CI_Controller
         $nama_depan   = $this->input->post('nama_depan');
         $nama_belakang = $this->input->post('nama_belakang');
         $tempat_lahir = $this->input->post('tempat_lahir');
+        $tempat_lahir_en = $this->input->post('tempat_lahir_en');
         $asal_negara  = $this->input->post('asal_negara');
         $tgl_lahir    = $this->input->post('tgl_lahir');
         $gender       = $this->input->post('gender');
@@ -248,6 +252,7 @@ class Paspor extends CI_Controller
             'nama_depan'   => $nama_depan,
             'nama_belakang' => $nama_belakang,
             'tempat_lahir' => $tempat_lahir,
+            'tempat_lahir_trans' => $tempat_lahir_en,
             'asal_negara'  => $asal_negara,
             'tgl_lahir'    => $tgl_lahir,
             'gender'       => $gender,
@@ -265,6 +270,29 @@ class Paspor extends CI_Controller
         ]);
     }
 
+    private function generateKodeOMC()
+    {
+        // generate angka random 4 digit
+        $angka = str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT);
+
+        // gabungkan dengan prefix OMC
+        return 'OMC' . $angka;
+    }
+
+    private function generateNoPaspor()
+    {
+        // 2 angka depan
+        $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+
+        // 7 angka belakang
+        $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+        // gabungkan dengan spasi
+        return $depan . ' ' . $belakang;
+    }
+
+
+
     public function print($id)
     {
         // ambil data dari database
@@ -274,40 +302,28 @@ class Paspor extends CI_Controller
             return;
         }
 
-        // isi konten html
-        $html = "
-    <h2 style='text-align:center;'>Data Paspor</h2>
-    <table border='1' cellpadding='6' cellspacing='0' width='100%'>
-        <tr>
-            <td><b>Nama Depan</b></td>
-            <td>{$paspor->nama_depan}</td>
-        </tr>
-        <tr>
-            <td><b>Nama Belakang</b></td>
-            <td>{$paspor->nama_belakang}</td>
-        </tr>
-        <tr>
-            <td><b>Negara</b></td>
-            <td>{$paspor->asal_negara}</td>
-        </tr>
-        <tr>
-            <td><b>Tempat Lahir</b></td>
-            <td>{$paspor->tempat_lahir}</td>
-        </tr>
-        <tr>
-            <td><b>Tanggal Lahir</b></td>
-            <td>{$paspor->tgl_lahir}</td>
-        </tr>
-        <tr>
-            <td><b>Gender</b></td>
-            <td>{$paspor->gender}</td>
-        </tr>
-    </table>";
+        $kodeOMC = $this->generateKodeOMC();
+        $noPaspor = $this->generateNoPaspor();
+
+        // background image (gunakan absolute URL)
+        $background = base_url('assets/img/rusia.png');
+
+        // load view sebagai string
+        $html = $this->load->view('paspor/paspor_rusia', [
+            'paspor'     => $paspor,
+            'background' => $background,
+            'kodeOMC'  => $kodeOMC,
+            'noPaspor'  => $noPaspor
+        ], true);
 
         // load library Pdf
         $this->load->library('pdf');
-        $mpdf = $this->pdf->load(); // sekarang bisa dipanggil
+        $mpdf = $this->pdf->load();
 
+        // 👉 taruh di sini biar background scale otomatis
+        $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
+
+        // render HTML
         $mpdf->WriteHTML($html);
         $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
     }

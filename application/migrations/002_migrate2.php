@@ -84,6 +84,11 @@ class Migration_Migrate2 extends CI_Migration
                 'constraint' => '100',
                 'null'       => FALSE
             ],
+            'tempat_lahir_trans' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => FALSE
+            ],
             'asal_negara' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
