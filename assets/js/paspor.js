@@ -13,6 +13,8 @@ $(document).ready(function () {
 		window.open(BASE_URL + "Paspor/print/" + id, "_blank");
 	});
 
+
+
 	document.getElementById("negara").addEventListener("change", function () {
 		let locale = this.value;
 
@@ -137,6 +139,11 @@ $(document).ready(function () {
 			},
 		});
 	});
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	let today = new Date().toISOString().split('T')[0];
+	document.getElementById("date_create").value = today;
 });
 
 function tablePaspor() {

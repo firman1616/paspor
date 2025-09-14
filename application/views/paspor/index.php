@@ -95,6 +95,12 @@
                                 <input type="text" class="form-control" id="gender" name="gender">
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="icon">Create Date</label>
+                                <input type="date" class="form-control" id="date_create" name="date_create">
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">

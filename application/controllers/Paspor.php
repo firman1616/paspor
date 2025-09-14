@@ -206,6 +206,12 @@ class Paspor extends CI_Controller
         $gender       = $this->input->post('gender');
         $nama_depan_trans       = $this->input->post('nama_depan_en');
         $nama_belakang_trans       = $this->input->post('nama_belakang_en');
+        $tgl_dibuat = $this->input->post('date_create');
+        $tgl_exp = null;
+        if ($tgl_dibuat) {
+            $tgl_exp = date('Y-m-d', strtotime($tgl_dibuat . ' +10 years'));
+        }
+
 
         // konfigurasi upload
         $config['upload_path']   = './assets/upload/paspor/';
@@ -273,6 +279,8 @@ class Paspor extends CI_Controller
             'nama_depan_trans'  => $nama_depan_trans,
             'nama_belakang_trans'  => $nama_belakang_trans,
             'signature'            => $signatureFile, // simpan nama file
+            'tgl_dibuat'    => $tgl_dibuat,
+            'tgl_exp'       => $tgl_exp
         ];
 
         $this->db->insert('tbl_paspor', $data);
@@ -306,14 +314,33 @@ class Paspor extends CI_Controller
 
     private function generateNumbFooter()
     {
-        // 2 angka depan
+        // 7 digit depan (fixed 7 digit dengan leading zero)
         $depan = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
 
-        // 7 angka belakang
-        $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+        // Huruf random A - Z
+        $huruf = chr(rand(65, 90)); // 65-90 = ASCII A-Z
+
+        // Tentukan panjang acak antara 7 - 22
+        $panjang = rand(15, 15);
+
+        // Generate angka belakang sesuai panjang acak
+        $belakang = '';
+        for ($i = 0; $i < $panjang; $i++) {
+            $belakang .= rand(0, 9);
+        }
+
+        // gabungkan
+        return $depan . $huruf . $belakang;
+    }
+
+
+    private function generateNumbFooterBelakang()
+    {
+        // 2 angka depan
+        $depan = str_pad(rand(1, 9), 1, '0', STR_PAD_LEFT);
 
         // gabungkan dengan spasi
-        return $depan . 'M' . $belakang;
+        return $depan;
     }
 
 
@@ -330,6 +357,7 @@ class Paspor extends CI_Controller
         $kodeOMC = $this->generateKodeOMC();
         $noPaspor = $this->generateNoPaspor();
         $noFooter = $this->generateNumbFooter();
+        $noFooter1digit = $this->generateNumbFooterBelakang();
 
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/rusia.png');
@@ -340,7 +368,8 @@ class Paspor extends CI_Controller
             'background' => $background,
             'kodeOMC'    => $kodeOMC,
             'noPaspor'   => $noPaspor,
-            'noFooter'   => $noFooter
+            'noFooter'   => $noFooter,
+            'noFooter1digit'   => $noFooter1digit,
         ], true);
 
         // load library Pdf
