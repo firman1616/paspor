@@ -21,7 +21,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+	    /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -32,7 +32,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -43,7 +43,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -54,7 +54,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -65,7 +65,7 @@
             left: 343px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -76,7 +76,7 @@
             left: 518px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -87,7 +87,7 @@
             left: 517px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -153,7 +153,7 @@
         .mrz-line2 {
             font-family: 'Courier New', monospace;
             font-size: 16px;
-            font-weight: bold;
+            /* font-weight: bold; */
             letter-spacing: 2px;
             position: absolute;
         }
@@ -184,7 +184,7 @@
             left: 250px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             color: #000;
         }
 
@@ -195,7 +195,7 @@
             left: 250px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
     </style>
@@ -266,7 +266,7 @@
 
     $fill = str_repeat('<span class="lt">&lt;</span>', max(0, $remaining));
 
-    $mrzLine2 = $line2 . $fill.'<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
+    $mrzLine2 = $line2 . $fill.'<span class="lt">&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
     ?>
 
     <div class="mrz-line2">
