@@ -21,7 +21,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-	    /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -32,7 +32,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -43,7 +43,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -54,7 +54,7 @@
             left: 251px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -65,7 +65,7 @@
             left: 343px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -76,7 +76,7 @@
             left: 518px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -86,8 +86,8 @@
             /* atur sesuai posisi kotak biru */
             left: 517px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            /* font-weight: bold; */
+            font-size: 23px;
+            font-weight: bold;
             /* color: #000; */
         }
 
@@ -151,11 +151,11 @@
 
         .mrz-line1,
         .mrz-line2 {
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-            /* font-weight: bold; */
-            letter-spacing: 2px;
-            position: absolute;
+            font-family: 'Calibri', monospace;
+            font-size: 23px;
+            font-weight: bold;
+            letter-spacing: 0px;
+            text-align: justify;
         }
 
         .mrz-line1 {
@@ -163,17 +163,21 @@
             top: 995px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
+            font-size: 21px;
+            text-align: justify;
         }
 
         .mrz-line2 {
             position: absolute;
-            bottom: 84px;
+            bottom: 65px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
+            font-size: 21px;
+            text-align: justify;
         }
 
         .lt {
-            font-size: 20px;
+            font-size: 24px;
             /* lebih besar dari huruf biasa */
         }
 
@@ -184,7 +188,7 @@
             left: 250px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             color: #000;
         }
 
@@ -195,8 +199,12 @@
             left: 250px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            /* font-weight: bold; */
+            font-weight: bold;
             /* color: #000; */
+        }
+
+        .nama-belakang,.nama-depan,.tempat_lahir {
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -214,7 +222,7 @@
         <?= date('d.m.Y', strtotime($paspor->tgl_lahir)) ?>
     </div>
     <div class="gender">
-        <?= $paspor->gender ?>
+        <?= $paspor->gender ?> / <?= $paspor->gender ?>
     </div>
     <div class="tempat_lahir">
         <?= $paspor->tempat_lahir ?> / <?= $paspor->tempat_lahir_trans ?>
@@ -253,7 +261,7 @@
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
@@ -266,7 +274,7 @@
 
     $fill = str_repeat('<span class="lt">&lt;</span>', max(0, $remaining));
 
-    $mrzLine2 = $line2 . $fill.'<span class="lt">&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
+    $mrzLine2 = $line2 . $fill . '<span class="lt">&lt;</span>' . $noFooter1digit;
     ?>
 
     <div class="mrz-line2">
