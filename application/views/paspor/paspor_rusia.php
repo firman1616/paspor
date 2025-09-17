@@ -185,7 +185,7 @@
         }
 
         .lt {
-            font-size: 24px;
+            font-size: 23px;
             /* lebih besar dari huruf biasa */
         }
 
@@ -286,7 +286,7 @@
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
@@ -297,9 +297,9 @@
     // sisakan space buat digit terakhir ($noFooter1digit)
     $remaining = $totalLength - strlen($line2) - strlen($noFooter1digit);
 
-    $fill = str_repeat('<span class="lt">&lt;</span>', max(0, $remaining));
+    // $fill = str_repeat(, max(0, $remaining));
 
-    $mrzLine2 = $line2 . $fill . '<span class="lt">&lt;</span>' . $noFooter1digit;
+    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
     ?>
 
     <div class="mrz-line2">

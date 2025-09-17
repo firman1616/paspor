@@ -299,11 +299,14 @@ class Paspor extends CI_Controller
 
     private function generateKodeOMC()
     {
-        // generate angka random 4 digit
-        $angka = str_pad(rand(0, 9999), 4, '0', STR_PAD_LEFT);
+        // generate angka random 6 digit
+        $angka = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
-        // gabungkan dengan prefix OMC
-        return 'OMC' . $angka;
+        // pecah jadi 3-3 digit, lalu gabungkan pakai "-"
+        $angkaFormat = substr($angka, 0, 3) . '-' . substr($angka, 3, 3);
+
+        // gabungkan dengan prefix ΦMC
+        return 'ΦMC ' . $angkaFormat;
     }
 
     private function generateNoPaspor()
