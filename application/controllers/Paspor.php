@@ -164,20 +164,27 @@ class Paspor extends CI_Controller
 
         $nama_depan = $parts[0];
         $nama_belakang = count($parts) > 1 ? $parts[count($parts) - 1] : '';
-        $tempat_lahir = $parts[0];
 
         $nama_depan_en = $nama_depan;
         $nama_belakang_en = $nama_belakang;
 
         // transliterasi hanya jika locale Rusia
         if ($locale === "ru_RU") {
-            $nama_depan_en = $this->transliterateRussian($nama_depan);
+            $nama_depan_en    = $this->transliterateRussian($nama_depan);
             $nama_belakang_en = $this->transliterateRussian($nama_belakang);
+        }
+
+        // generate tempat lahir sesuai locale
+        $tempat_lahir = $faker->city;  // faker city sesuai locale
+        $tempat_lahir_en = $tempat_lahir;
+
+        // kalau locale rusia → transliterasi nama kota juga
+        if ($locale === "ru_RU") {
             $tempat_lahir_en = $this->transliterateRussian($tempat_lahir);
         }
 
-        $tempat_lahir = $this->fakerFirstAvailable($faker, ['city', 'state', 'region', 'county', 'country']);
-        $tgl_lahir = $faker->dateTimeBetween('-50 years', '-18 years')->format('Y-m-d');
+        $tgl_lahir = $faker->dateTimeBetween('1985-01-01', '1992-12-31')->format('Y-m-d');
+        $tgl_dibuat = $faker->dateTimeBetween('2020-01-01', '2024-12-31')->format('Y-m-d');
         $gender = $faker->randomElement(['M', 'F']);
 
         echo json_encode([
@@ -186,13 +193,12 @@ class Paspor extends CI_Controller
             'nama_depan_en'    => $nama_depan_en,
             'nama_belakang_en' => $nama_belakang_en,
             'tempat_lahir'     => $tempat_lahir,
-            'tempat_lahir_en'        => $tempat_lahir_en,
+            'tempat_lahir_en'  => $tempat_lahir_en,
             'tgl_lahir'        => $tgl_lahir,
+            'tgl_dibuat'       => $tgl_dibuat,
             'gender'           => $gender
         ]);
     }
-
-
 
     public function simpan()
     {

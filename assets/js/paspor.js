@@ -75,6 +75,10 @@ $(document).ready(function () {
 						document.getElementById("tempat_lahir_en").value =
 							data.tempat_lahir_en;
 					}
+					if (data.tgl_dibuat) {
+						document.getElementById("date_create").value =
+							data.tgl_dibuat;
+					}
 				})
 				.catch((err) => console.error("Error:", err));
 		}
@@ -141,10 +145,10 @@ $(document).ready(function () {
 	});
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-	let today = new Date().toISOString().split('T')[0];
-	document.getElementById("date_create").value = today;
-});
+// document.addEventListener("DOMContentLoaded", function () {
+// 	let today = new Date().toISOString().split('T')[0];
+// 	document.getElementById("date_create").value = today;
+// });
 
 function tablePaspor() {
 	$.ajax({

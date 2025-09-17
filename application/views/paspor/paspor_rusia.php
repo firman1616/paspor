@@ -119,6 +119,14 @@
             height: auto;
         }
 
+        .signature-img,
+        .signature-img-dup {
+            width: 155px;
+            height: auto;
+            filter: contrast(300%) brightness(0.8);
+        }
+
+
         .foto {
             position: absolute;
             top: 660px;
@@ -203,8 +211,25 @@
             /* color: #000; */
         }
 
-        .nama-belakang,.nama-depan,.tempat_lahir {
+        .nama-belakang,
+        .nama-depan,
+        .tempat_lahir {
             text-transform: uppercase;
+        }
+
+        .nama-belakang,
+        .nama-depan,
+        .tgl_lahir,
+        .gender,
+        .tempat_lahir,
+        .kode_omc,
+        .no_paspor,
+        .tgl_dibuat,
+        .tgl_exp,
+        .mrz-line1,
+        .mrz-line2 {
+            filter: blur(1px);
+            /* angka kecil biar ga terlalu buram */
         }
     </style>
 </head>
