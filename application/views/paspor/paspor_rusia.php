@@ -231,6 +231,25 @@
             filter: blur(1px);
             /* angka kecil biar ga terlalu buram */
         }
+
+        .no_paspor_top {
+            position: absolute;
+            top: 450px;
+            /* sesuaikan biar pas kotaknya */
+            left: 520px;
+            /* geser ke kanan biar di posisi sesuai */
+            font-size: 22px;
+            font-weight: bold;
+            font-family: monospace, sans-serif;
+            /* mirip angka mesin */
+            letter-spacing: 2px;
+            /* jarak antar angka */
+            color: #000;
+            transform: rotate(-90deg);
+            /* putar 90 derajat ke atas */
+            transform-origin: left top;
+            /* titik rotasi biar lebih rapi */
+        }
     </style>
 </head>
 
@@ -283,6 +302,10 @@
 
     <div class="tgl_exp">
         <?= $paspor->tgl_exp ?>
+    </div>
+
+    <div class="no_paspor_top">
+        <?= $noPaspor ?>
     </div>
 
     <div class="mrz-line1">
