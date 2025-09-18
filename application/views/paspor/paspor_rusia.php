@@ -232,23 +232,25 @@
             /* angka kecil biar ga terlalu buram */
         }
 
+        @font-face {
+            font-family: 'Codystar';
+            src: url('<?= base_url("assets/fonts/Codystar-Regular.ttf") ?>') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         .no_paspor_top {
             position: absolute;
             top: 450px;
-            /* sesuaikan biar pas kotaknya */
             left: 520px;
-            /* geser ke kanan biar di posisi sesuai */
             font-size: 22px;
             font-weight: bold;
-            font-family: monospace, sans-serif;
-            /* mirip angka mesin */
+            font-family: 'Codystar', monospace, sans-serif;
+            /* fallback tetap ada */
             letter-spacing: 2px;
-            /* jarak antar angka */
             color: #000;
-            transform: rotate(-90deg);
-            /* putar 90 derajat ke atas */
-            transform-origin: left top;
-            /* titik rotasi biar lebih rapi */
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
         }
     </style>
 </head>
@@ -305,11 +307,12 @@
     </div>
 
     <div class="no_paspor_top">
-        <?= $noPaspor ?>
+        <!-- <?= $noPaspor ?> -->
+        <h2>Lorem ipsum</h2>
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
