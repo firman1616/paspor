@@ -32,21 +32,6 @@ class Paspor extends CI_Controller
         echo json_encode($this->load->view('paspor/paspor-table', $data, false));
     }
 
-    private function getCountryName($locale)
-    {
-        $map = [
-            'id_ID' => 'Indonesia',
-            'ru_RU' => 'Rusia',
-            'en_US' => 'Amerika Serikat',
-            'fr_FR' => 'Perancis',
-            'ja_JP' => 'Jepang',
-            'de_DE' => 'Jerman',
-            'es_ES' => 'Spanyol',
-            'zh_CN' => 'China',
-        ];
-        return $map[$locale] ?? 'Tidak Dikenal';
-    }
-
     private function getNegaraList()
     {
         return [
@@ -58,6 +43,7 @@ class Paspor extends CI_Controller
             'de_DE' => 'Jerman',
             'es_ES' => 'Spanyol',
             'zh_CN' => 'China',
+            'tk_TM' => 'Turkmenistan',
         ];
     }
 
@@ -352,8 +338,6 @@ class Paspor extends CI_Controller
         return $depan;
     }
 
-
-
     public function print($id)
     {
         // ambil data dari database
@@ -370,6 +354,45 @@ class Paspor extends CI_Controller
 
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/rusia.png');
+
+        // load view sebagai string
+        $html = $this->load->view('paspor/paspor_rusia', [
+            'paspor'     => $paspor,
+            'background' => $background,
+            'kodeOMC'    => $kodeOMC,
+            'noPaspor'   => $noPaspor,
+            'noFooter'   => $noFooter,
+            'noFooter1digit'   => $noFooter1digit,
+        ], true);
+
+        // load library Pdf
+        $this->load->library('pdf');
+        $mpdf = $this->pdf->load();
+
+        // 👉 taruh di sini biar background scale otomatis
+        $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
+
+        // render HTML
+        $mpdf->WriteHTML($html);
+        $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
+    }
+
+    public function print_tm($id)
+    {
+        // ambil data dari database
+        $paspor = $this->db->get_where('tbl_paspor', ['id' => $id])->row();
+        if (!$paspor) {
+            show_error("Data tidak ditemukan");
+            return;
+        }
+
+        $kodeOMC = $this->generateKodeOMC();
+        $noPaspor = $this->generateNoPaspor();
+        $noFooter = $this->generateNumbFooter();
+        $noFooter1digit = $this->generateNumbFooterBelakang();
+
+        // background image (gunakan absolute URL)
+        $background = base_url('assets/img/tm.png');
 
         // load view sebagai string
         $html = $this->load->view('paspor/paspor_rusia', [

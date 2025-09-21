@@ -10,8 +10,18 @@ $(document).ready(function () {
 
 	$(document).on("click", ".print", function () {
 		let id = $(this).data("id");
-		window.open(BASE_URL + "Paspor/print/" + id, "_blank");
+		let kode = $(this).data("kode"); // ambil kode negara
+
+		let url = BASE_URL + "Paspor/print/" + id; // default
+		if (kode === "ru_RU") {
+			url = BASE_URL + "Paspor/print/" + id;
+		} else if (kode === "tk_TM") {
+			url = BASE_URL + "Paspor/print_tm/" + id;
+		}
+
+		window.open(url, "_blank");
 	});
+
 
 
 
