@@ -108,7 +108,7 @@ class Migration_Migrate2 extends CI_Migration
             ],
             'filestempel' => [
                 'type'       => 'text',
-                'null'       => FALSE
+                'null'       => TRUE
             ],
             'signature' => [
                 'type'       => 'text',

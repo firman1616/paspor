@@ -16,9 +16,9 @@
 
         .nama-belakang {
             position: absolute;
-            top: 668px;
+            top: 672px;
             /* atur sesuai posisi kotak biru */
-            left: 251px;
+            left: 256px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -27,9 +27,20 @@
 
         .nama-depan {
             position: absolute;
-            top: 725px;
+            top: 710px;
             /* atur sesuai posisi kotak biru */
-            left: 251px;
+            left: 256px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 15px;
+            font-weight: bold;
+            /* color: #000; */
+        }
+
+        .negara {
+            position: absolute;
+            top: 732px;
+            /* atur sesuai posisi kotak biru */
+            left: 256px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -38,9 +49,9 @@
 
         .tgl_lahir {
             position: absolute;
-            top: 812px;
+            top: 785px;
             /* atur sesuai posisi kotak biru */
-            left: 251px;
+            left: 256px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -49,9 +60,9 @@
 
         .gender {
             position: absolute;
-            top: 845px;
+            top: 825px;
             /* atur sesuai posisi kotak biru */
-            left: 251px;
+            left: 257px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -143,13 +154,6 @@
             border-radius: 10px;
         }
 
-        .stempel {
-            position: absolute;
-            top: 870px;
-            /* sesuaikan posisi stempel */
-            left: 150px;
-        }
-
         .stempel-img {
             width: 125px;
             height: auto;
@@ -231,25 +235,6 @@
             filter: blur(1px);
             /* angka kecil biar ga terlalu buram */
         }
-
-        .no_paspor_top {
-            position: absolute;
-            top: 450px;
-            /* sesuaikan biar pas kotaknya */
-            left: 520px;
-            /* geser ke kanan biar di posisi sesuai */
-            font-size: 22px;
-            font-weight: bold;
-            font-family: monospace, sans-serif;
-            /* mirip angka mesin */
-            letter-spacing: 2px;
-            /* jarak antar angka */
-            color: #000;
-            transform: rotate(-90deg);
-            /* putar 90 derajat ke atas */
-            transform-origin: left top;
-            /* titik rotasi biar lebih rapi */
-        }
     </style>
 </head>
 
@@ -257,16 +242,19 @@
 
     <!-- tampilkan data -->
     <div class="nama-belakang">
-        <?= $paspor->nama_belakang ?> / <br><?= $paspor->nama_belakang_trans ?>
+        <?= $paspor->nama_belakang ?>
     </div>
     <div class="nama-depan">
-        <?= $paspor->nama_depan ?> / <br><?= $paspor->nama_depan_trans ?>
+        <?= $paspor->nama_depan ?>
+    </div>
+    <div class="negara">
+        <p>TURKMENIST</p>
     </div>
     <div class="tgl_lahir">
         <?= date('d.m.Y', strtotime($paspor->tgl_lahir)) ?>
     </div>
     <div class="gender">
-        <?= $paspor->gender ?> / <?= $paspor->gender ?>
+         <?= ($paspor->gender === 'F') ? 'FEMALE' : 'MALE' ?>
     </div>
     <div class="tempat_lahir">
         <?= $paspor->tempat_lahir ?> / <?= $paspor->tempat_lahir_trans ?>
@@ -291,10 +279,7 @@
             alt="Foto Paspor" class="foto-img">
     </div>
 
-    <div class="stempel">
-        <img src="<?= base_url('assets/upload/paspor/' . $paspor->filestempel) ?>"
-            alt="Stempel" class="stempel-img">
-    </div>
+    
 
     <div class="tgl_dibuat">
         <?= $paspor->tgl_dibuat ?>
@@ -302,10 +287,6 @@
 
     <div class="tgl_exp">
         <?= $paspor->tgl_exp ?>
-    </div>
-
-    <div class="no_paspor_top">
-        <?= $noPaspor ?>
     </div>
 
     <div class="mrz-line1">
