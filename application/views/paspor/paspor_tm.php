@@ -184,12 +184,25 @@
             border-radius: 10px;
         }
 
-        .stempel-img {
-            width: 125px;
-            height: auto;
-            opacity: 0.8;
-            /* transparan dikit biar mirip stempel asli */
+        .foto-wrapper {
+            position: relative;
+            width: 120px;
+            /* sesuaikan ukuran */
+            height: 140px;
+            /* sesuaikan ukuran */
+            background: url('<?= base_url("assets/img/frame.png") ?>') no-repeat center center;
+            background-size: contain;
+            /* biar pas */
         }
+
+        .foto-wrapper .foto-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: circle(47% at 50% 50%);
+            /* opsional, biar tidak keluar frame */
+        }
+
 
         .mrz-line1,
         .mrz-line2 {
@@ -279,7 +292,7 @@
     <div class="negara">
         <p>TURKMENIST</p>
     </div>
-     <div class="personalNumber">
+    <div class="personalNumber">
         <?= $personalNumber ?>
     </div>
     <div class="tgl_lahir">
@@ -289,17 +302,17 @@
         <?= $kodeautentikasi ?>
     </div>
     <div class="gender">
-         <?= ($paspor->gender === 'F') ? 'FEMALE' : 'MALE' ?>
+        <?= ($paspor->gender === 'F') ? 'FEMALE' : 'MALE' ?>
     </div>
     <div class="tempat_lahir">
         <P>TKM</P>
     </div>
-   
+
     <div class="no_paspor">
         <?= $noPasporTM ?>
     </div>
 
-     <div class="no_paspor_bawah">
+    <div class="no_paspor_bawah">
         <?= $noPasporTM ?>
     </div>
 
@@ -309,6 +322,11 @@
     </div>
 
     <div class="foto">
+        <img src="<?= base_url('assets/upload/paspor/' . $paspor->filefoto) ?>"
+            alt="Foto Paspor" class="foto-img">
+    </div>
+
+    <div class="foto-wrapper">
         <img src="<?= base_url('assets/upload/paspor/' . $paspor->filefoto) ?>"
             alt="Foto Paspor" class="foto-img">
     </div>
@@ -325,7 +343,7 @@
         <p>P</p>
     </div>
 
-     <div class="tkm">
+    <div class="tkm">
         <p>TKM</p>
     </div>
 
@@ -335,7 +353,7 @@
     </div>
     <?php
     // generate MRZ Line 2 dengan panjang fix 44 karakter
-    $line2 = str_replace(' ', '', $noPasporTM) .'<span class="lt">&lt;</span>' . $noFooter;
+    $line2 = str_replace(' ', '', $noPasporTM) . '<span class="lt">&lt;</span>' . $noFooter;
 
     $totalLength = 44;
     // sisakan space buat digit terakhir ($noFooter1digit)
