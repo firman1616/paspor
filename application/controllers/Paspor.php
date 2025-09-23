@@ -295,48 +295,130 @@ class Paspor extends CI_Controller
         return 'ΦMC ' . $angkaFormat;
     }
 
-    private function generateNoPaspor()
+    private function generateAuthCode(int $length = 4): string
     {
-        // 2 angka depan
-        $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+        $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $maxIndex = strlen($chars) - 1;
+        $result = '';
 
-        // 7 angka belakang
-        $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
-
-        // gabungkan dengan spasi
-        return $depan . ' ' . $belakang;
-    }
-
-    private function generateNumbFooter()
-    {
-        // 7 digit depan (fixed 7 digit dengan leading zero)
-        $depan = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
-
-        // Huruf random A - Z
-        $huruf = chr(rand(65, 90)); // 65-90 = ASCII A-Z
-
-        // Tentukan panjang acak antara 7 - 22
-        $panjang = rand(15, 15);
-
-        // Generate angka belakang sesuai panjang acak
-        $belakang = '';
-        for ($i = 0; $i < $panjang; $i++) {
-            $belakang .= rand(0, 9);
+        for ($i = 0; $i < $length; $i++) {
+            $result .= $chars[random_int(0, $maxIndex)];
         }
 
-        // gabungkan
-        return $depan . $huruf . $belakang;
+        return $result;
     }
 
 
-    private function generateNumbFooterBelakang()
+    // private function generateNoPaspor()
+    // {
+    //     // 2 angka depan
+    //     $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+
+    //     // 7 angka belakang
+    //     $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+    //     // gabungkan dengan spasi
+    //     return $depan . ' ' . $belakang;
+    // }
+
+    private function generateNoPaspor($kode_negara = 'ru_RU')
     {
-        // 2 angka depan
-        $depan = str_pad(rand(1, 9), 1, '0', STR_PAD_LEFT);
-
-        // gabungkan dengan spasi
-        return $depan;
+        if ($kode_negara === 'tk_TM') {
+            // format: DE + 7 digit angka
+            $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+            return 'DE' . $belakang;
+        } else {
+            // default (misalnya ru_RU)
+            $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+            $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+            return $depan . ' ' . $belakang;
+        }
     }
+
+    private function generatePersonalNumber()
+    {
+        // 9 digit angka random
+        $angka = str_pad(rand(0, 999999999), 9, '0', STR_PAD_LEFT);
+
+        // tambah prefix DZ
+        return 'DZ' . $angka;
+    }
+
+
+    // private function generateNumbFooter()
+    // {
+    //     // 7 digit depan (fixed 7 digit dengan leading zero)
+    //     $depan = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+    //     // Huruf random A - Z
+    //     $huruf = chr(rand(65, 90)); // 65-90 = ASCII A-Z
+
+    //     // Tentukan panjang acak antara 7 - 22
+    //     $panjang = rand(15, 15);
+
+    //     // Generate angka belakang sesuai panjang acak
+    //     $belakang = '';
+    //     for ($i = 0; $i < $panjang; $i++) {
+    //         $belakang .= rand(0, 9);
+    //     }
+
+    //     // gabungkan
+    //     return $depan . $huruf . $belakang;
+    // }
+
+    private function generateNumbFooter($countryCode = 'ru_RU')
+    {
+        if ($countryCode === 'ru_RU') {
+            // 7 digit depan (fixed 7 digit dengan leading zero)
+            $depan = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+            // Huruf random A - Z
+            $huruf = chr(rand(65, 90)); // 65-90 = ASCII A-Z
+
+            // Panjang fixed 15 digit angka belakang
+            $belakang = '';
+            for ($i = 0; $i < 15; $i++) {
+                $belakang .= rand(0, 9);
+            }
+
+            return $depan . $huruf . $belakang;
+        } elseif ($countryCode === 'tk_TM') {
+            // 1 digit angka depan
+            $depan = rand(0, 9);
+
+            // Huruf TKM
+            $middle = 'TKM';
+
+            // 7 digit angka
+            $angka7 = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+            // 1 huruf random
+            $huruf = chr(rand(65, 90));
+
+            // 6 digit angka
+            $angka6 = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+
+            return $depan . $middle . $angka7 . $huruf . $angka6;
+        }
+
+        // fallback kalau kodenya tidak dikenali
+        return null;
+    }
+
+    private function generateNumbFooterBelakang($countryCode = 'ru_RU')
+    {
+        if ($countryCode === 'ru_RU') {
+            // Rusia → 1 digit angka (1–9)
+            return str_pad(rand(1, 9), 1, '0', STR_PAD_LEFT);
+        } elseif ($countryCode === 'tk_TM') {
+            // Turkmenistan → 2 digit angka (00–99)
+            return str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+        }
+
+        // Default fallback → 1 digit
+        return str_pad(rand(1, 9), 1, '0', STR_PAD_LEFT);
+    }
+
 
     public function print($id)
     {
@@ -348,7 +430,7 @@ class Paspor extends CI_Controller
         }
 
         $kodeOMC = $this->generateKodeOMC();
-        $noPaspor = $this->generateNoPaspor();
+        $noPaspor = $this->generateNoPaspor('ru_RU');
         $noFooter = $this->generateNumbFooter();
         $noFooter1digit = $this->generateNumbFooterBelakang();
 
@@ -386,10 +468,11 @@ class Paspor extends CI_Controller
             return;
         }
 
-        $kodeOMC = $this->generateKodeOMC();
-        $noPaspor = $this->generateNoPaspor();
-        $noFooter = $this->generateNumbFooter();
-        $noFooter1digit = $this->generateNumbFooterBelakang();
+        $kodeautentikasi = $this->generateAuthCode(4);
+        $noPasporTM    = $this->generateNoPaspor('tk_TM');
+        $noFooter = $this->generateNumbFooter('tk_TM');
+        $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
+        $personalNumber = $this->generatePersonalNumber();
 
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/tm.png');
@@ -398,10 +481,11 @@ class Paspor extends CI_Controller
         $html = $this->load->view('paspor/paspor_tm', [
             'paspor'     => $paspor,
             'background' => $background,
-            'kodeOMC'    => $kodeOMC,
-            'noPaspor'   => $noPaspor,
+            'kodeautentikasi'    => $kodeautentikasi,
+            'noPasporTM'   => $noPasporTM,
             'noFooter'   => $noFooter,
             'noFooter1digit'   => $noFooter1digit,
+            'personalNumber'   => $personalNumber,
         ], true);
 
         // load library Pdf

@@ -38,9 +38,20 @@
 
         .negara {
             position: absolute;
-            top: 732px;
+            top: 730px;
             /* atur sesuai posisi kotak biru */
             left: 256px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 15px;
+            font-weight: bold;
+            /* color: #000; */
+        }
+
+        .personalNumber {
+            position: absolute;
+            top: 745px;
+            /* atur sesuai posisi kotak biru */
+            left: 517px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -52,6 +63,17 @@
             top: 785px;
             /* atur sesuai posisi kotak biru */
             left: 256px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 15px;
+            font-weight: bold;
+            /* color: #000; */
+        }
+
+        .autentikasi {
+            position: absolute;
+            top: 785px;
+            /* atur sesuai posisi kotak biru */
+            left: 517px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -71,20 +93,9 @@
 
         .tempat_lahir {
             position: absolute;
-            top: 845px;
+            top: 808px;
             /* atur sesuai posisi kotak biru */
-            left: 343px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
-            /* color: #000; */
-        }
-
-        .kode_omc {
-            position: absolute;
-            top: 877px;
-            /* atur sesuai posisi kotak biru */
-            left: 518px;
+            left: 348px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -93,41 +104,60 @@
 
         .no_paspor {
             position: absolute;
-            top: 627px;
+            top: 632px;
             /* atur sesuai posisi kotak biru */
             left: 517px;
             /* geser kanan sesuai kotak biru */
-            font-size: 23px;
+            font-size: 16px;
+            font-weight: bold;
+            /* color: #000; */
+        }
+
+        .no_paspor_bawah {
+            position: absolute;
+            top: 822px;
+            /* atur sesuai posisi kotak biru */
+            left: 528px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
+            font-weight: bold;
+            /* color: #000; */
+        }
+
+        .p {
+            position: absolute;
+            top: 615px;
+            /* atur sesuai posisi kotak biru */
+            left: 255px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
+            font-weight: bold;
+            /* color: #000; */
+        }
+
+        .tkm {
+            position: absolute;
+            top: 615px;
+            /* atur sesuai posisi kotak biru */
+            left: 347px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
             font-weight: bold;
             /* color: #000; */
         }
 
         .signature {
             position: absolute;
-            bottom: 140px;
+            bottom: 162px;
             /* atur jarak dari bawah halaman */
-            left: 550px;
+            left: 500px;
             /* atur posisi horizontal */
         }
 
         .signature-img {
-            width: 155px;
+            width: 197px;
             /* atur ukuran tanda tangan */
-            height: auto;
-        }
-
-        .signature-dup {
-            position: absolute;
-            top: 475px;
-            /* atur jarak dari bawah halaman */
-            left: 355px;
-            /* atur posisi horizontal */
-        }
-
-        .signature-img-dup {
-            width: 155px;
-            /* atur ukuran tanda tangan */
-            height: auto;
+            height: 202px;
         }
 
         .signature-img,
@@ -195,9 +225,9 @@
 
         .tgl_dibuat {
             position: absolute;
-            top: 879px;
+            top: 863px;
             /* atur sesuai posisi kotak biru */
-            left: 250px;
+            left: 256px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -206,9 +236,9 @@
 
         .tgl_exp {
             position: absolute;
-            top: 925px;
+            top: 900px;
             /* atur sesuai posisi kotak biru */
-            left: 250px;
+            left: 256px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -226,7 +256,6 @@
         .tgl_lahir,
         .gender,
         .tempat_lahir,
-        .kode_omc,
         .no_paspor,
         .tgl_dibuat,
         .tgl_exp,
@@ -250,28 +279,33 @@
     <div class="negara">
         <p>TURKMENIST</p>
     </div>
+     <div class="personalNumber">
+        <?= $personalNumber ?>
+    </div>
     <div class="tgl_lahir">
         <?= date('d.m.Y', strtotime($paspor->tgl_lahir)) ?>
+    </div>
+    <div class="autentikasi">
+        <?= $kodeautentikasi ?>
     </div>
     <div class="gender">
          <?= ($paspor->gender === 'F') ? 'FEMALE' : 'MALE' ?>
     </div>
     <div class="tempat_lahir">
-        <?= $paspor->tempat_lahir ?> / <?= $paspor->tempat_lahir_trans ?>
+        <P>TKM</P>
     </div>
-    <div class="kode_omc">
-        <?= $kodeOMC ?>
-    </div>
+   
     <div class="no_paspor">
-        <?= $noPaspor ?>
+        <?= $noPasporTM ?>
     </div>
+
+     <div class="no_paspor_bawah">
+        <?= $noPasporTM ?>
+    </div>
+
     <div class="signature">
         <img src="<?= base_url('assets/upload/paspor/' . $paspor->signature) ?>"
             alt="Tanda Tangan" class="signature-img">
-    </div>
-    <div class="signature-dup">
-        <img src="<?= base_url('assets/upload/paspor/' . $paspor->signature) ?>"
-            alt="Tanda Tangan" class="signature-img-dup">
     </div>
 
     <div class="foto">
@@ -279,23 +313,29 @@
             alt="Foto Paspor" class="foto-img">
     </div>
 
-    
-
     <div class="tgl_dibuat">
-        <?= $paspor->tgl_dibuat ?>
+        <?= date('d.m.y', strtotime($paspor->tgl_dibuat)) ?>
     </div>
 
     <div class="tgl_exp">
-        <?= $paspor->tgl_exp ?>
+        <?= date('d.m.y', strtotime($paspor->tgl_exp)) ?>
+    </div>
+
+    <div class="p">
+        <p>P</p>
+    </div>
+
+     <div class="tkm">
+        <p>TKM</p>
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span>TKM<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
     // generate MRZ Line 2 dengan panjang fix 44 karakter
-    $line2 = str_replace(' ', '', $noPaspor) . $noFooter1digit . 'RUS' . $noFooter;
+    $line2 = str_replace(' ', '', $noPasporTM) .'<span class="lt">&lt;</span>' . $noFooter;
 
     $totalLength = 44;
     // sisakan space buat digit terakhir ($noFooter1digit)
@@ -303,17 +343,13 @@
 
     // $fill = str_repeat(, max(0, $remaining));
 
-    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
+    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
     ?>
 
     <div class="mrz-line2">
         <?= $mrzLine2 ?>
     </div>
 
-
-
-    <!-- <?= $paspor->nama_belakang_trans ?><<<?= $paspor->nama_depan_trans ?><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<br>
-        <?= $noPaspor ?>0RUS<?= $noFooter ?><<<<<<<<<<<<<<<<<<<<<<<<<?= '06' ?> -->
 </body>
 
 </html>
