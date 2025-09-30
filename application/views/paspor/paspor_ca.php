@@ -16,101 +16,79 @@
 
         .nama-belakang {
             position: absolute;
-            top: 672px;
+            top: 652px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
         .nama-depan {
             position: absolute;
-            top: 710px;
+            top: 683px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
         .negara {
             position: absolute;
-            top: 730px;
+            top: 699px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
-            /* color: #000; */
-        }
-
-        .personalNumber {
-            position: absolute;
-            top: 745px;
-            /* atur sesuai posisi kotak biru */
-            left: 517px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
         .tgl_lahir {
             position: absolute;
-            top: 785px;
+            top: 743px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
-            /* color: #000; */
-        }
-
-        .autentikasi {
-            position: absolute;
-            top: 785px;
-            /* atur sesuai posisi kotak biru */
-            left: 517px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
         .gender {
             position: absolute;
-            top: 825px;
+            top: 772px;
             /* atur sesuai posisi kotak biru */
-            left: 257px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
-            font-weight: bold;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
         .tempat_lahir {
             position: absolute;
-            top: 808px;
+            top: 760px;
             /* atur sesuai posisi kotak biru */
-            left: 348px;
+            left: 369px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
         .no_paspor {
             position: absolute;
-            top: 632px;
+            top: 619px;
             /* atur sesuai posisi kotak biru */
-            left: 517px;
+            left: 545px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-            /* color: #000; */
+            color: #383737ff;
         }
 
         .no_paspor_bawah {
@@ -119,30 +97,30 @@
             /* atur sesuai posisi kotak biru */
             left: 528px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 13px;
             font-weight: bold;
             /* color: #000; */
         }
 
         .p {
             position: absolute;
-            top: 615px;
+            top: 602px;
             /* atur sesuai posisi kotak biru */
-            left: 255px;
+            left: 333px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 15px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
-        .tkm {
+        .can {
             position: absolute;
-            top: 615px;
+            top: 602px;
             /* atur sesuai posisi kotak biru */
-            left: 347px;
+            left: 410px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
+            font-size: 14px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -207,7 +185,7 @@
         .mrz-line1,
         .mrz-line2 {
             font-family: 'Calibri', monospace;
-            font-size: 23px;
+            font-size: 16px;
             font-weight: bold;
             letter-spacing: 0px;
             text-align: justify;
@@ -215,11 +193,9 @@
 
         .mrz-line1 {
             position: absolute;
-            top: 995px;
+            top: 943px;
             /* atur sesuai posisi kotak biru */
-            left: 65px;
-            font-size: 21px;
-            text-align: justify;
+            left: 215px;
         }
 
         .mrz-line2 {
@@ -227,34 +203,43 @@
             bottom: 65px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
-            font-size: 21px;
-            text-align: justify;
         }
 
         .lt {
-            font-size: 23px;
+            font-size: 18px;
             /* lebih besar dari huruf biasa */
         }
 
         .tgl_dibuat {
             position: absolute;
-            top: 863px;
+            top: 807px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
             color: #000;
         }
 
         .tgl_exp {
             position: absolute;
-            top: 900px;
+            top: 838px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 322px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
-            font-weight: bold;
+            font-size: 13px;
+            /* font-weight: bold; */
+            /* color: #000; */
+        }
+
+        .ircc {
+            position: absolute;
+            top: 855px;
+            /* atur sesuai posisi kotak biru */
+            left: 322px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 13px;
+            /* font-weight: bold; */
             /* color: #000; */
         }
 
@@ -290,30 +275,24 @@
         <?= $paspor->nama_depan ?>
     </div>
     <div class="negara">
-        <p>TURKMENIST</p>
-    </div>
-    <div class="personalNumber">
-        <?= $personalNumber ?>
+        <p>CANADIAN</p>
     </div>
     <div class="tgl_lahir">
-        <?= date('d.m.Y', strtotime($paspor->tgl_lahir)) ?>
-    </div>
-    <div class="autentikasi">
-        <?= $kodeautentikasi ?>
+        <?= $tgl_lahir_indo ?> / <?= strtoupper($bulan_tahun_fr) ?>
     </div>
     <div class="gender">
-        <?= ($paspor->gender === 'F') ? 'FEMALE' : 'MALE' ?>
+        <?= $paspor->gender ?>
     </div>
     <div class="tempat_lahir">
-        <P>TKM</P>
+        <P><?= $paspor->tempat_lahir ?></P>
     </div>
 
     <div class="no_paspor">
-        <?= $noPasporTM ?>
+        <?= $noPasporCA ?>
     </div>
 
     <div class="no_paspor_bawah">
-        <?= $noPasporTM ?>
+        <?= $noPasporCA ?>
     </div>
 
     <div class="signature">
@@ -343,17 +322,21 @@
         <p>P</p>
     </div>
 
-    <div class="tkm">
-        <p>TKM</p>
+    <div class="can">
+        <p>CAN</p>
+    </div>
+
+    <div class="ircc">
+        <p>IRCC</p>
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span>TKM<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span>CAN<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
     // generate MRZ Line 2 dengan panjang fix 44 karakter
-    $line2 = str_replace(' ', '', $noPasporTM) . '<span class="lt">&lt;</span>' . $noFooter;
+    $line2 = str_replace(' ', '', $noPasporCA) . '<span class="lt">&lt;</span>' . $noFooter;
 
     $totalLength = 44;
     // sisakan space buat digit terakhir ($noFooter1digit)

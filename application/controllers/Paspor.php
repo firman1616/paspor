@@ -325,16 +325,21 @@ class Paspor extends CI_Controller
     private function generateNoPaspor($kode_negara = 'ru_RU')
     {
         if ($kode_negara === 'tk_TM') {
-            // format: DE + 7 digit angka
+            // 🇹🇲 Turkmenistan: DE + 7 digit angka
             $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
             return 'DE' . $belakang;
+        } elseif ($kode_negara === 'ca_CA') {
+            // 🇨🇦 Kanada: UT + 6 digit angka
+            $belakang = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+            return 'UT' . $belakang;
         } else {
-            // default (misalnya ru_RU)
+            // 🇷🇺 Default (misalnya Rusia): 2 digit angka + spasi + 7 digit angka
             $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
             $belakang = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
             return $depan . ' ' . $belakang;
         }
     }
+
 
     private function generatePersonalNumber()
     {
@@ -511,23 +516,43 @@ class Paspor extends CI_Controller
         }
 
         $kodeautentikasi = $this->generateAuthCode(4);
-        $noPasporTM    = $this->generateNoPaspor('tk_TM');
+        $noPasporCA    = $this->generateNoPaspor('ca_CA');
         $noFooter = $this->generateNumbFooter('tk_TM');
         $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
         $personalNumber = $this->generatePersonalNumber();
 
+        $bulanID = [
+            1 => 'JANUARI',
+            'FEBUARI',
+            'MARET',
+            'APRIL',
+            'MEI',
+            'JUNI',
+            'JULI',
+            'AGUSTUS',
+            'SEPTEMBER',
+            'OKTOBER',
+            'NOBEMBER',
+            'DESEMBER'
+        ];
+        $tgl_lahir_indo = date('d', strtotime($paspor->tgl_lahir)) . ' ' . $bulanID[date('n', strtotime($paspor->tgl_lahir))];
+
+        // ✅ Format Bulan + Tahun dalam Bahasa Prancis Kanada
+        setlocale(LC_TIME, 'fr_CA.UTF-8', 'fr_CA', 'fr_CA.utf8');
+        $bulan_tahun_fr = strftime('%B %Y', strtotime($paspor->tgl_lahir));
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/canada.png');
 
         // load view sebagai string
-        $html = $this->load->view('paspor/paspor_tm', [
+        $html = $this->load->view('paspor/paspor_ca', [
             'paspor'     => $paspor,
             'background' => $background,
-            'kodeautentikasi'    => $kodeautentikasi,
-            'noPasporTM'   => $noPasporTM,
+            'noPasporCA'   => $noPasporCA,
             'noFooter'   => $noFooter,
             'noFooter1digit'   => $noFooter1digit,
             'personalNumber'   => $personalNumber,
+            'tgl_lahir_indo'    => $tgl_lahir_indo,
+            'bulan_tahun_fr'    => $bulan_tahun_fr,
         ], true);
 
         // load library Pdf
