@@ -18,6 +18,9 @@ $(document).ready(function () {
 		} else if (kode === "tk_TM") {
 			url = BASE_URL + "Paspor/print_tm/" + id;
 		}
+		else if (kode === "ca_CA") {
+			url = BASE_URL + "Paspor/print_ca/" + id;
+		}
 
 		window.open(url, "_blank");
 	});

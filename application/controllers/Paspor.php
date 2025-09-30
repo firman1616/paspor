@@ -44,6 +44,7 @@ class Paspor extends CI_Controller
             'es_ES' => 'Spanyol',
             'zh_CN' => 'China',
             'tk_TM' => 'Turkmenistan',
+            'ca_CA' => 'Kanada',
         ];
     }
 
@@ -476,6 +477,47 @@ class Paspor extends CI_Controller
 
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/tm.png');
+
+        // load view sebagai string
+        $html = $this->load->view('paspor/paspor_tm', [
+            'paspor'     => $paspor,
+            'background' => $background,
+            'kodeautentikasi'    => $kodeautentikasi,
+            'noPasporTM'   => $noPasporTM,
+            'noFooter'   => $noFooter,
+            'noFooter1digit'   => $noFooter1digit,
+            'personalNumber'   => $personalNumber,
+        ], true);
+
+        // load library Pdf
+        $this->load->library('pdf');
+        $mpdf = $this->pdf->load();
+
+        // 👉 taruh di sini biar background scale otomatis
+        $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
+
+        // render HTML
+        $mpdf->WriteHTML($html);
+        $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
+    }
+
+    public function print_ca($id)
+    {
+        // ambil data dari database
+        $paspor = $this->db->get_where('tbl_paspor', ['id' => $id])->row();
+        if (!$paspor) {
+            show_error("Data tidak ditemukan");
+            return;
+        }
+
+        $kodeautentikasi = $this->generateAuthCode(4);
+        $noPasporTM    = $this->generateNoPaspor('tk_TM');
+        $noFooter = $this->generateNumbFooter('tk_TM');
+        $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
+        $personalNumber = $this->generatePersonalNumber();
+
+        // background image (gunakan absolute URL)
+        $background = base_url('assets/img/canada.png');
 
         // load view sebagai string
         $html = $this->load->view('paspor/paspor_tm', [
