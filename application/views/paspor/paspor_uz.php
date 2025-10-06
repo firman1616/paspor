@@ -126,9 +126,9 @@
 
         .signature {
             position: absolute;
-            bottom: 162px;
+            top: 468px;
             /* atur jarak dari bawah halaman */
-            left: 500px;
+            left: 386px;
             /* atur posisi horizontal */
         }
 
@@ -216,24 +216,24 @@
 
         .tgl_dibuat {
             position: absolute;
-            top: 863px;
+            bottom: 210px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 273px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
-            color: #000;
+            color: #6b6b6bff;
         }
 
         .tgl_exp {
             position: absolute;
-            top: 900px;
+            bottom: 175px;
             /* atur sesuai posisi kotak biru */
-            left: 256px;
+            left: 273px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
-            /* color: #000; */
+            color: #6b6b6bff;
         }
 
         .nama-belakang,
@@ -310,11 +310,11 @@
     </div>
 
     <div class="tgl_dibuat">
-        <?= date('d.m.y', strtotime($paspor->tgl_dibuat)) ?>
+        <?= date('d m y', strtotime($paspor->tgl_dibuat)) ?>
     </div>
 
     <div class="tgl_exp">
-        <?= date('d.m.y', strtotime($paspor->tgl_exp)) ?>
+        <?= date('d m y', strtotime($paspor->tgl_exp)) ?>
     </div>
 
     <div class="mrz-line1">
