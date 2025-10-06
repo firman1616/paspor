@@ -21,6 +21,9 @@ $(document).ready(function () {
 		else if (kode === "ca_CA") {
 			url = BASE_URL + "Paspor/print_ca/" + id;
 		}
+		else if (kode === "uz_UZ") {
+			url = BASE_URL + "Paspor/print_uz/" + id;
+		}
 
 		window.open(url, "_blank");
 	});

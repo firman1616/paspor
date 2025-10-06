@@ -35,16 +35,18 @@ class Paspor extends CI_Controller
     private function getNegaraList()
     {
         return [
-            'id_ID' => 'Indonesia',
             'ru_RU' => 'Rusia',
-            'en_US' => 'Amerika Serikat',
-            'fr_FR' => 'Perancis',
-            'ja_JP' => 'Jepang',
-            'de_DE' => 'Jerman',
-            'es_ES' => 'Spanyol',
-            'zh_CN' => 'China',
             'tk_TM' => 'Turkmenistan',
-            'ca_CA' => 'Kanada',
+            'uz_UZ' => 'Uzbekistan',
+            've_VE' => 'Venezuela',
+            // 'ca_CA' => 'Kanada',
+            // 'id_ID' => 'Indonesia',
+            // 'en_US' => 'Amerika Serikat',
+            // 'fr_FR' => 'Perancis',
+            // 'ja_JP' => 'Jepang',
+            // 'de_DE' => 'Jerman',
+            // 'es_ES' => 'Spanyol',
+            // 'zh_CN' => 'China',
         ];
     }
 
@@ -405,7 +407,7 @@ class Paspor extends CI_Controller
             $angka6 = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
             return $depan . $middle . $angka7 . $huruf . $angka6;
-        }elseif ($countryCode === 'ca_CA') {
+        } elseif ($countryCode === 'ca_CA') {
             // 1 digit angka depan
             $depan = rand(0, 9);
 
@@ -570,6 +572,47 @@ class Paspor extends CI_Controller
             'personalNumber'   => $personalNumber,
             'tgl_lahir_indo'    => $tgl_lahir_indo,
             'bulan_tahun_fr'    => $bulan_tahun_fr,
+        ], true);
+
+        // load library Pdf
+        $this->load->library('pdf');
+        $mpdf = $this->pdf->load();
+
+        // 👉 taruh di sini biar background scale otomatis
+        $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
+
+        // render HTML
+        $mpdf->WriteHTML($html);
+        $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
+    }
+
+    public function print_uz($id)
+    {
+        // ambil data dari database
+        $paspor = $this->db->get_where('tbl_paspor', ['id' => $id])->row();
+        if (!$paspor) {
+            show_error("Data tidak ditemukan");
+            return;
+        }
+
+        $kodeautentikasi = $this->generateAuthCode(4);
+        $noPasporTM    = $this->generateNoPaspor('tk_TM');
+        $noFooter = $this->generateNumbFooter('tk_TM');
+        $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
+        $personalNumber = $this->generatePersonalNumber();
+
+        // background image (gunakan absolute URL)
+        $background = base_url('assets/img/uzbek.png');
+
+        // load view sebagai string
+        $html = $this->load->view('paspor/paspor_uz', [
+            'paspor'     => $paspor,
+            'background' => $background,
+            'kodeautentikasi'    => $kodeautentikasi,
+            'noPasporTM'   => $noPasporTM,
+            'noFooter'   => $noFooter,
+            'noFooter1digit'   => $noFooter1digit,
+            'personalNumber'   => $personalNumber,
         ], true);
 
         // load library Pdf
