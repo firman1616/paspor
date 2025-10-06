@@ -126,9 +126,9 @@
 
         .signature {
             position: absolute;
-            bottom: 162px;
+            top: 240px;
             /* atur jarak dari bawah halaman */
-            left: 500px;
+            left: 345px;
             /* atur posisi horizontal */
         }
 
@@ -148,16 +148,16 @@
 
         .foto {
             position: absolute;
-            top: 660px;
+            top: 637px;
             /* sesuaikan agar pas dengan kotak foto */
-            left: 50px;
+            left: 205px;
             /* geser ke kanan */
         }
 
         .foto-img {
-            width: 180px;
-            /* ukuran foto paspor */
-            height: 270px;
+            width: 120px;
+            /* sesuaikan ukuran */
+            height: 140px;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -186,7 +186,7 @@
         .mrz-line2 {
             font-family: 'Calibri', monospace;
             font-size: 16px;
-            font-weight: bold;
+            /* font-weight: bold; */
             letter-spacing: 0px;
             text-align: justify;
         }
@@ -195,14 +195,14 @@
             position: absolute;
             top: 943px;
             /* atur sesuai posisi kotak biru */
-            left: 215px;
+            left: 205px;
         }
 
         .mrz-line2 {
             position: absolute;
-            bottom: 65px;
+            top: 965px;
             /* atur sesuai posisi kotak biru */
-            left: 65px;
+            left: 205px;
         }
 
         .lt {
@@ -331,7 +331,7 @@
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span>CAN<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span>CAN<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
@@ -344,7 +344,7 @@
 
     // $fill = str_repeat(, max(0, $remaining));
 
-    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
+    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
     ?>
 
     <div class="mrz-line2">

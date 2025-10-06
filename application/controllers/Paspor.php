@@ -405,6 +405,23 @@ class Paspor extends CI_Controller
             $angka6 = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
             return $depan . $middle . $angka7 . $huruf . $angka6;
+        }elseif ($countryCode === 'ca_CA') {
+            // 1 digit angka depan
+            $depan = rand(0, 9);
+
+            // Huruf TKM
+            $middle = 'CAN';
+
+            // 7 digit angka
+            $angka7 = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+            // 1 huruf random
+            $huruf = chr(rand(65, 90));
+
+            // 6 digit angka
+            $angka6 = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+
+            return $depan . $middle . $angka7 . $huruf . $angka6;
         }
 
         // fallback kalau kodenya tidak dikenali
@@ -517,7 +534,7 @@ class Paspor extends CI_Controller
 
         $kodeautentikasi = $this->generateAuthCode(4);
         $noPasporCA    = $this->generateNoPaspor('ca_CA');
-        $noFooter = $this->generateNumbFooter('tk_TM');
+        $noFooter = $this->generateNumbFooter('ca_CA');
         $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
         $personalNumber = $this->generatePersonalNumber();
 
