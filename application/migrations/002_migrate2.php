@@ -65,6 +65,11 @@ class Migration_Migrate2 extends CI_Migration
                 'constraint' => '100',
                 'null'       => FALSE
             ],
+            'nama_tengah' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+                'null'       => TRUE
+            ],
             'tgl_lahir' => [
                 'type'       => 'DATE',
                 'null'       => FALSE

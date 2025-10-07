@@ -154,6 +154,16 @@ class Paspor extends CI_Controller
         $nama_depan = $parts[0];
         $nama_belakang = count($parts) > 1 ? $parts[count($parts) - 1] : '';
 
+        $nama_tengah = '';
+        $nama_tengah_en = '';
+
+        // ✅ Khusus untuk Uzbekistan → generate nama tengah
+        if ($locale === "uz_UZ") {
+            // Bisa pakai nama depan tambahan dari faker
+            $nama_tengah = $faker->firstName;
+            $nama_tengah_en = $nama_tengah;
+        }
+
         $nama_depan_en = $nama_depan;
         $nama_belakang_en = $nama_belakang;
 
@@ -178,8 +188,10 @@ class Paspor extends CI_Controller
 
         echo json_encode([
             'nama_depan'       => $nama_depan,
+            'nama_tengah'      => $nama_tengah,
             'nama_belakang'    => $nama_belakang,
             'nama_depan_en'    => $nama_depan_en,
+            'nama_tengah_en'   => $nama_tengah_en,
             'nama_belakang_en' => $nama_belakang_en,
             'tempat_lahir'     => $tempat_lahir,
             'tempat_lahir_en'  => $tempat_lahir_en,
@@ -193,6 +205,7 @@ class Paspor extends CI_Controller
     {
         $kode_negara  = $this->input->post('negara');
         $nama_depan   = $this->input->post('nama_depan');
+        $nama_tengah = $this->input->post('nama_tengah');
         $nama_belakang = $this->input->post('nama_belakang');
         $tempat_lahir = $this->input->post('tempat_lahir');
         $tempat_lahir_en = $this->input->post('tempat_lahir_en');
@@ -275,7 +288,8 @@ class Paspor extends CI_Controller
             'nama_belakang_trans'  => $nama_belakang_trans,
             'signature'            => $signatureFile, // simpan nama file
             'tgl_dibuat'    => $tgl_dibuat,
-            'tgl_exp'       => $tgl_exp
+            'tgl_exp'       => $tgl_exp,
+            'nama_tengah'   => $nama_tengah
         ];
 
         $this->db->insert('tbl_paspor', $data);
@@ -334,6 +348,10 @@ class Paspor extends CI_Controller
             // 🇨🇦 Kanada: UT + 6 digit angka
             $belakang = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
             return 'UT' . $belakang;
+        } elseif ($kode_negara === 'uz_UZ') {
+            // uzbekistan: UT + 6 digit angka
+            $belakang = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
+            return 'GF' . $belakang;
         } else {
             // 🇷🇺 Default (misalnya Rusia): 2 digit angka + spasi + 7 digit angka
             $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
@@ -586,6 +604,29 @@ class Paspor extends CI_Controller
         $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
     }
 
+    private function generateUzbekName()
+    {
+        $faker = Faker\Factory::create('uz_UZ');
+
+        // ambil nama lengkap dari faker
+        $fullName = $faker->name;
+
+        // pecah nama jadi bagian-bagian
+        $parts = explode(' ', $fullName);
+
+        $nama_depan = $parts[0];
+        $nama_tengah = (count($parts) > 2) ? $parts[1] : '';
+        $nama_belakang = end($parts);
+
+        return [
+            'nama_depan'   => $nama_depan,
+            'nama_tengah'  => $nama_tengah,
+            'nama_belakang' => $nama_belakang,
+            'full_name'    => $fullName
+        ];
+    }
+
+
     public function print_uz($id)
     {
         // ambil data dari database
@@ -596,10 +637,11 @@ class Paspor extends CI_Controller
         }
 
         $kodeautentikasi = $this->generateAuthCode(4);
-        $noPasporTM    = $this->generateNoPaspor('tk_TM');
+        $noPasporUZ    = $this->generateNoPaspor('uz_UZ');
         $noFooter = $this->generateNumbFooter('tk_TM');
         $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
-        $personalNumber = $this->generatePersonalNumber();
+        // ✅ generate nama Uzbek random
+        $namaUzbek = $this->generateUzbekName();
 
         // background image (gunakan absolute URL)
         $background = base_url('assets/img/uzbek.png');
@@ -609,10 +651,10 @@ class Paspor extends CI_Controller
             'paspor'     => $paspor,
             'background' => $background,
             'kodeautentikasi'    => $kodeautentikasi,
-            'noPasporTM'   => $noPasporTM,
+            'noPasporUZ'   => $noPasporUZ,
             'noFooter'   => $noFooter,
             'noFooter1digit'   => $noFooter1digit,
-            'personalNumber'   => $personalNumber,
+            'namaUzbek'  => $namaUzbek,
         ], true);
 
         // load library Pdf

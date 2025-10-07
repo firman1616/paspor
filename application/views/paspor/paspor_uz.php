@@ -25,11 +25,44 @@
             color: #6b6b6bff;
         }
 
+        .nama-belakang-atas {
+            position: absolute;
+            top: 208px;
+            /* atur sesuai posisi kotak biru */
+            left: 75px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
+            font-weight: bold;
+            color: #6b6b6bff;
+        }
+
         .nama-depan {
             position: absolute;
             top: 715px;
             /* atur sesuai posisi kotak biru */
             left: 270px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
+            font-weight: bold;
+            color: #6b6b6bff;
+        }
+
+        .nama-depan-atas {
+            position: absolute;
+            top: 253px;
+            /* atur sesuai posisi kotak biru */
+            left: 75px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
+            font-weight: bold;
+            color: #6b6b6bff;
+        }
+
+        .nama-tengah {
+            position: absolute;
+            top: 305px;
+            /* atur sesuai posisi kotak biru */
+            left: 75px;
             /* geser kanan sesuai kotak biru */
             font-size: 16px;
             font-weight: bold;
@@ -47,15 +80,26 @@
             color: #6b6b6bff;
         }
 
-        .personalNumber {
+        .negara-atas {
             position: absolute;
-            top: 745px;
+            top: 373px;
             /* atur sesuai posisi kotak biru */
-            left: 517px;
+            left: 75px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
+            font-size: 14px;
             font-weight: bold;
-            /* color: #000; */
+            color: #6b6b6bff;
+        }
+
+        .lembaga {
+            position: absolute;
+            top: 412px;
+            /* atur sesuai posisi kotak biru */
+            left: 75px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 14px;
+            font-weight: bold;
+            color: #6b6b6bff;
         }
 
         .tgl_lahir {
@@ -69,15 +113,15 @@
             color: #6b6b6bff;
         }
 
-        .autentikasi {
+        .tgl_lahir_atas {
             position: absolute;
-            top: 785px;
+            top: 350px;
             /* atur sesuai posisi kotak biru */
-            left: 517px;
+            left: 75px;
             /* geser kanan sesuai kotak biru */
-            font-size: 15px;
+            font-size: 16px;
             font-weight: bold;
-            /* color: #000; */
+            color: #6b6b6bff;
         }
 
         .gender {
@@ -87,6 +131,17 @@
             left: 290px;
             /* geser kanan sesuai kotak biru */
             font-size: 17px;
+            font-weight: bold;
+            color: #6b6b6bff;
+        }
+
+        .gender_atas {
+            position: absolute;
+            top: 255px;
+            /* atur sesuai posisi kotak biru */
+            right: 145px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 16px;
             font-weight: bold;
             color: #6b6b6bff;
         }
@@ -102,26 +157,26 @@
             color: #6b6b6bff;
         }
 
-        .no_paspor {
+        .tempat_lahir_atas {
             position: absolute;
-            top: 632px;
+            top: 348px;
             /* atur sesuai posisi kotak biru */
-            left: 517px;
+            left: 305px;
             /* geser kanan sesuai kotak biru */
             font-size: 16px;
             font-weight: bold;
-            /* color: #000; */
+            color: #6b6b6bff;
         }
 
-        .no_paspor_bawah {
+        .no_paspor {
             position: absolute;
-            top: 822px;
+            top: 605px;
             /* atur sesuai posisi kotak biru */
-            left: 528px;
+            left: 583px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            /* color: #000; */
+            color: #6b6b6bff;
         }
 
         .signature {
@@ -148,47 +203,18 @@
 
         .foto {
             position: absolute;
-            top: 660px;
+            bottom: 160px;
             /* sesuaikan agar pas dengan kotak foto */
-            left: 50px;
+            left: 65px;
             /* geser ke kanan */
         }
 
         .foto-img {
-            width: 180px;
+            width: 190px;
             /* ukuran foto paspor */
-            height: 270px;
+            height: 280px;
             object-fit: cover;
             border-radius: 10px;
-        }
-
-        .foto-wrapper {
-            position: relative;
-            width: 120px;
-            /* sesuaikan ukuran */
-            height: 140px;
-            /* sesuaikan ukuran */
-            background: url('<?= base_url("assets/img/frame.png") ?>') no-repeat center center;
-            background-size: contain;
-            /* biar pas */
-        }
-
-        .foto-wrapper .foto-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            clip-path: circle(47% at 50% 50%);
-            /* opsional, biar tidak keluar frame */
-        }
-
-
-        .mrz-line1,
-        .mrz-line2 {
-            font-family: 'Calibri', monospace;
-            font-size: 23px;
-            font-weight: bold;
-            letter-spacing: 0px;
-            text-align: justify;
         }
 
         .mrz-line1 {
@@ -196,21 +222,26 @@
             top: 995px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
-            font-size: 21px;
+            font-size: 17px;
             text-align: justify;
+            font-weight: bold;
+            color: #6b6b6bff;
         }
 
         .mrz-line2 {
             position: absolute;
-            bottom: 65px;
+            bottom: 75px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
-            font-size: 21px;
+            font-size: 17px;
             text-align: justify;
+            font-weight: bold;
+            color: #6b6b6bff;
         }
 
         .lt {
-            font-size: 23px;
+            font-size: 18px;
+            font-weight: bold;
             /* lebih besar dari huruf biasa */
         }
 
@@ -236,9 +267,25 @@
             color: #6b6b6bff;
         }
 
+        .otorisasi {
+            position: absolute;
+            bottom: 210px;
+            /* atur sesuai posisi kotak biru */
+            left: 495px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 17px;
+            font-weight: bold;
+            color: #6b6b6bff;
+        }
+
         .nama-belakang,
+        .nama-belakang-atas,
         .nama-depan,
-        .tempat_lahir {
+        .nama-depan-atas,
+        .nama-tengah,
+        .tempat_lahir,
+        .tempat_lahir_atas,
+        .otorisasi {
             text-transform: uppercase;
         }
 
@@ -264,34 +311,49 @@
     <div class="nama-belakang">
         <?= $paspor->nama_belakang ?>
     </div>
+    <div class="nama-belakang-atas">
+        <?= $paspor->nama_belakang ?>
+    </div>
     <div class="nama-depan">
         <?= $paspor->nama_depan ?>
+    </div>
+    <div class="nama-depan-atas">
+        <?= $paspor->nama_depan ?>
+    </div>
+    <div class="nama-tengah">
+        <?= $paspor->nama_tengah ?>
     </div>
     <div class="negara">
         <p>O'ZBEKISTON RESPUBLIKASI FUQAROSI</p>
     </div>
-    <div class="personalNumber">
-        <?= $personalNumber ?>
+    <div class="negara-atas">
+        <p>O'ZBEKISTON RESPUBLIKASI FUQAROSI</p>
+    </div>
+    <div class="lembaga">
+        <p>TOSHKENT VILOYATI <BR>O'RTACHIRCHIQ TUMANI IIB</p>
     </div>
     <div class="tgl_lahir">
         <?= date('d m Y', strtotime($paspor->tgl_lahir)) ?>
     </div>
-    <div class="autentikasi">
-        <?= $kodeautentikasi ?>
+    <div class="tgl_lahir_atas">
+        <?= date('d m Y', strtotime($paspor->tgl_lahir)) ?>
     </div>
     <div class="gender">
-        <?= $paspor->gender?>
+        <?= $paspor->gender ?>
+    </div>
+    <div class="gender_atas">
+        <?= ($paspor->gender == 'F') ? 'A Y O L' : 'O D A M' ?>
     </div>
     <div class="tempat_lahir">
         <?= $paspor->tempat_lahir ?>
     </div>
 
-    <div class="no_paspor">
-        <?= $noPasporTM ?>
+    <div class="tempat_lahir_atas">
+        <?= $paspor->tempat_lahir ?>
     </div>
 
-    <div class="no_paspor_bawah">
-        <?= $noPasporTM ?>
+    <div class="no_paspor">
+        <?= $noPasporUZ ?>
     </div>
 
     <div class="signature">
@@ -304,11 +366,6 @@
             alt="Foto Paspor" class="foto-img">
     </div>
 
-    <div class="foto-wrapper">
-        <img src="<?= base_url('assets/upload/paspor/' . $paspor->filefoto) ?>"
-            alt="Foto Paspor" class="foto-img">
-    </div>
-
     <div class="tgl_dibuat">
         <?= date('d m y', strtotime($paspor->tgl_dibuat)) ?>
     </div>
@@ -317,13 +374,17 @@
         <?= date('d m y', strtotime($paspor->tgl_exp)) ?>
     </div>
 
+    <div class="otorisasi">
+        <?= $namaUzbek['full_name']; ?>
+    </div>
+
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span>TKM<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P <span class="lt">&lt;</span> UZB<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
     <?php
     // generate MRZ Line 2 dengan panjang fix 44 karakter
-    $line2 = str_replace(' ', '', $noPasporTM) . '<span class="lt">&lt;</span>' . $noFooter;
+    $line2 = str_replace(' ', '', $noPasporUZ) . '<span class="lt">&lt;</span>' . $noFooter;
 
     $totalLength = 44;
     // sisakan space buat digit terakhir ($noFooter1digit)

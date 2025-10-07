@@ -55,6 +55,12 @@
                             <label>Nama Depan (EN)</label>
                             <input type="text" class="form-control" id="nama_depan_en" name="nama_depan_en" readonly>
                         </div>
+                        <div class="col-md-4" id="nama_tengah_group" style="display: none;">
+                            <label>Nama Tengah (Asli)</label>
+                            <input type="text" class="form-control" id="nama_tengah" name="nama_tengah">
+                            <label>Nama Tengah (EN)</label>
+                            <input type="text" class="form-control" id="nama_tengah_en" name="nama_tengah_en" readonly>
+                        </div>
                         <div class="col-md-6">
                             <label>Nama Belakang (Asli)</label>
                             <input type="text" class="form-control" id="nama_belakang" name="nama_belakang" required>

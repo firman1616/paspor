@@ -17,19 +17,14 @@ $(document).ready(function () {
 			url = BASE_URL + "Paspor/print/" + id;
 		} else if (kode === "tk_TM") {
 			url = BASE_URL + "Paspor/print_tm/" + id;
-		}
-		else if (kode === "ca_CA") {
+		} else if (kode === "ca_CA") {
 			url = BASE_URL + "Paspor/print_ca/" + id;
-		}
-		else if (kode === "uz_UZ") {
+		} else if (kode === "uz_UZ") {
 			url = BASE_URL + "Paspor/print_uz/" + id;
 		}
 
 		window.open(url, "_blank");
 	});
-
-
-
 
 	document.getElementById("negara").addEventListener("change", function () {
 		let locale = this.value;
@@ -37,6 +32,15 @@ $(document).ready(function () {
 		let fileFotoInput = document.getElementById("filefoto");
 		let stempelGroup = document.getElementById("stempelGroup");
 		let fileStempelInput = document.getElementById("filestempel");
+
+		let namaTengahGroup = document.getElementById("nama_tengah_group");
+		if (locale === "uz_UZ") {
+			namaTengahGroup.style.display = "block";
+		} else {
+			namaTengahGroup.style.display = "none";
+			document.getElementById("nama_tengah").value = "";
+			document.getElementById("nama_tengah_en").value = "";
+		}
 
 		if (locale === "ru_RU") {
 			// Rusia: foto wajib, stempel muncul & wajib
@@ -92,8 +96,15 @@ $(document).ready(function () {
 							data.tempat_lahir_en;
 					}
 					if (data.tgl_dibuat) {
-						document.getElementById("date_create").value =
-							data.tgl_dibuat;
+						document.getElementById("date_create").value = data.tgl_dibuat;
+					}
+					// ✅ Tambahan: isi nama tengah jika ada
+					if (data.nama_tengah) {
+						document.getElementById("nama_tengah").value = data.nama_tengah;
+					}
+					if (data.nama_tengah_en) {
+						document.getElementById("nama_tengah_en").value =
+							data.nama_tengah_en;
 					}
 				})
 				.catch((err) => console.error("Error:", err));
