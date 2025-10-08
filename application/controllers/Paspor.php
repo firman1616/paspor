@@ -442,6 +442,20 @@ class Paspor extends CI_Controller
             $angka6 = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
 
             return $depan . $middle . $angka7 . $huruf . $angka6;
+        } elseif ($countryCode === 'uz_UZ') {
+            // ✅ 7 digit angka random
+            $angka7 = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+
+            // ✅ 1 huruf random
+            $huruf = chr(rand(65, 90));
+
+            // ✅ 29 digit angka random
+            $angka29 = '';
+            for ($i = 0; $i < 29; $i++) {
+                $angka29 .= rand(0, 9);
+            }
+
+            return $angka7 . $huruf . $angka29;
         }
 
         // fallback kalau kodenya tidak dikenali
@@ -638,8 +652,8 @@ class Paspor extends CI_Controller
 
         $kodeautentikasi = $this->generateAuthCode(4);
         $noPasporUZ    = $this->generateNoPaspor('uz_UZ');
-        $noFooter = $this->generateNumbFooter('tk_TM');
-        $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
+        $noFooter = $this->generateNumbFooter('uz_UZ');
+        // $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
         // ✅ generate nama Uzbek random
         $namaUzbek = $this->generateUzbekName();
 
@@ -653,7 +667,7 @@ class Paspor extends CI_Controller
             'kodeautentikasi'    => $kodeautentikasi,
             'noPasporUZ'   => $noPasporUZ,
             'noFooter'   => $noFooter,
-            'noFooter1digit'   => $noFooter1digit,
+            // 'noFooter1digit'   => $noFooter1digit,
             'namaUzbek'  => $namaUzbek,
         ], true);
 

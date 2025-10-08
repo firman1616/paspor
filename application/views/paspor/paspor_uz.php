@@ -4,6 +4,11 @@
 <head>
     <meta charset="utf-8">
     <style>
+        @font-face {
+            font-family: 'DotMatrix';
+            src: url('<?= base_url("assets/fonts/DotMatrix.ttf") ?>') format('truetype');
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -11,7 +16,7 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            font-family: Arial, Helvetica, sans-serif;
+            /* font-family: Arial, Helvetica, sans-serif; */
         }
 
         .nama-belakang {
@@ -222,7 +227,7 @@
             top: 995px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
-            font-size: 17px;
+            font-size: 18px;
             text-align: justify;
             font-weight: bold;
             color: #6b6b6bff;
@@ -233,14 +238,14 @@
             bottom: 75px;
             /* atur sesuai posisi kotak biru */
             left: 65px;
-            font-size: 17px;
+            font-size: 18px;
             text-align: justify;
             font-weight: bold;
             color: #6b6b6bff;
         }
 
         .lt {
-            font-size: 18px;
+            font-size: 21px;
             font-weight: bold;
             /* lebih besar dari huruf biasa */
         }
@@ -269,11 +274,11 @@
 
         .otorisasi {
             position: absolute;
-            bottom: 210px;
+            bottom: 185px;
             /* atur sesuai posisi kotak biru */
             left: 495px;
             /* geser kanan sesuai kotak biru */
-            font-size: 17px;
+            font-size: 18px;
             font-weight: bold;
             color: #6b6b6bff;
         }
@@ -301,6 +306,20 @@
         .mrz-line2 {
             filter: blur(1px);
             /* angka kecil biar ga terlalu buram */
+        }
+
+        .dot-serial {
+            font-family: 'DotMatrix', monospace;
+            font-size: 26px;
+            letter-spacing: 4px;
+            transform: rotate(-90deg);
+            transform-origin: left top;
+            position: absolute;
+            right: 30px;
+            /* sesuaikan posisi kanan */
+            top: 200px;
+            /* sesuaikan posisi vertikal */
+            white-space: nowrap;
         }
     </style>
 </head>
@@ -375,28 +394,20 @@
     </div>
 
     <div class="otorisasi">
-        <?= $namaUzbek['full_name']; ?>
+        <!-- <?= $namaUzbek['full_name']; ?> -->
+        FARG'0NA SH. ADLIYA<BR>BO'LIMI
     </div>
+
+    <div class="dot-serial"><?= $noPasporUZ ?></div>
 
     <div class="mrz-line1">
-        P <span class="lt">&lt;</span> UZB<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
+        P <span class="lt">&lt;</span> UZB<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
-    <?php
-    // generate MRZ Line 2 dengan panjang fix 44 karakter
-    $line2 = str_replace(' ', '', $noPasporUZ) . '<span class="lt">&lt;</span>' . $noFooter;
-
-    $totalLength = 44;
-    // sisakan space buat digit terakhir ($noFooter1digit)
-    $remaining = $totalLength - strlen($line2) - strlen($noFooter1digit);
-
-    // $fill = str_repeat(, max(0, $remaining));
-
-    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
-    ?>
 
     <div class="mrz-line2">
-        <?= $mrzLine2 ?>
+        <?= $noPasporUZ ?>UZB<?= $noFooter ?>
+        <!-- <?= $mrzLine2 ?> -->
     </div>
 
 </body>
