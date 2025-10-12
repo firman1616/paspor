@@ -682,4 +682,46 @@ class Paspor extends CI_Controller
         $mpdf->WriteHTML($html);
         $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
     }
+
+    public function print_ve($id)
+    {
+        // ambil data dari database
+        $paspor = $this->db->get_where('tbl_paspor', ['id' => $id])->row();
+        if (!$paspor) {
+            show_error("Data tidak ditemukan");
+            return;
+        }
+
+        $kodeautentikasi = $this->generateAuthCode(4);
+        $noPasporUZ    = $this->generateNoPaspor('uz_UZ');
+        $noFooter = $this->generateNumbFooter('uz_UZ');
+        // $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
+        // ✅ generate nama Uzbek random
+        $namaUzbek = $this->generateUzbekName();
+
+        // background image (gunakan absolute URL)
+        $background = base_url('assets/img/vene.png');
+
+        // load view sebagai string
+        $html = $this->load->view('paspor/paspor_uz', [
+            'paspor'     => $paspor,
+            'background' => $background,
+            'kodeautentikasi'    => $kodeautentikasi,
+            'noPasporUZ'   => $noPasporUZ,
+            'noFooter'   => $noFooter,
+            // 'noFooter1digit'   => $noFooter1digit,
+            'namaUzbek'  => $namaUzbek,
+        ], true);
+
+        // load library Pdf
+        $this->load->library('pdf');
+        $mpdf = $this->pdf->load();
+
+        // 👉 taruh di sini biar background scale otomatis
+        $mpdf->SetDefaultBodyCSS('background-image-resize', 6);
+
+        // render HTML
+        $mpdf->WriteHTML($html);
+        $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
+    }
 }
