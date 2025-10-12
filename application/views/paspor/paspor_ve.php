@@ -21,79 +21,35 @@
 
         .nama-belakang {
             position: absolute;
-            top: 660px;
+            top: 669px;
             /* atur sesuai posisi kotak biru */
-            left: 270px;
+            left: 260px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .nama-belakang-atas {
-            position: absolute;
-            top: 208px;
-            /* atur sesuai posisi kotak biru */
-            left: 75px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .nama-depan {
             position: absolute;
-            top: 715px;
+            top: 708px;
             /* atur sesuai posisi kotak biru */
-            left: 270px;
+            left: 260px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .nama-depan-atas {
-            position: absolute;
-            top: 253px;
-            /* atur sesuai posisi kotak biru */
-            left: 75px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .nama-tengah {
-            position: absolute;
-            top: 305px;
-            /* atur sesuai posisi kotak biru */
-            left: 75px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .negara {
             position: absolute;
-            top: 750px;
+            top: 730px;
             /* atur sesuai posisi kotak biru */
-            left: 273px;
+            left: 260px;
             /* geser kanan sesuai kotak biru */
-            font-size: 14px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .negara-atas {
-            position: absolute;
-            top: 373px;
-            /* atur sesuai posisi kotak biru */
-            left: 75px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 14px;
-            font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .lembaga {
@@ -109,68 +65,35 @@
 
         .tgl_lahir {
             position: absolute;
-            top: 798px;
+            top: 787px;
             /* atur sesuai posisi kotak biru */
-            left: 273px;
+            left: 260px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .tgl_lahir_atas {
-            position: absolute;
-            top: 350px;
-            /* atur sesuai posisi kotak biru */
-            left: 75px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .gender {
             position: absolute;
-            top: 832px;
+            top: 787px;
             /* atur sesuai posisi kotak biru */
-            left: 290px;
+            left: 453px;
             /* geser kanan sesuai kotak biru */
-            font-size: 17px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .gender_atas {
-            position: absolute;
-            top: 255px;
-            /* atur sesuai posisi kotak biru */
-            right: 145px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .tempat_lahir {
             position: absolute;
             top: 832px;
             /* atur sesuai posisi kotak biru */
-            left: 375px;
+            left: 453px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
-        }
-
-        .tempat_lahir_atas {
-            position: absolute;
-            top: 348px;
-            /* atur sesuai posisi kotak biru */
-            left: 305px;
-            /* geser kanan sesuai kotak biru */
-            font-size: 16px;
-            font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .no_paspor {
@@ -186,9 +109,9 @@
 
         .signature {
             position: absolute;
-            top: 468px;
+            bottom: 150px;
             /* atur jarak dari bawah halaman */
-            left: 386px;
+            left: 225px;
             /* atur posisi horizontal */
         }
 
@@ -252,24 +175,24 @@
 
         .tgl_dibuat {
             position: absolute;
-            bottom: 210px;
+            top: 832px;
             /* atur sesuai posisi kotak biru */
-            left: 273px;
+            left: 253px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .tgl_exp {
             position: absolute;
-            bottom: 175px;
+            top: 872px;
             /* atur sesuai posisi kotak biru */
-            left: 273px;
+            left: 253px;
             /* geser kanan sesuai kotak biru */
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .otorisasi {
@@ -284,12 +207,8 @@
         }
 
         .nama-belakang,
-        .nama-belakang-atas,
         .nama-depan,
-        .nama-depan-atas,
-        .nama-tengah,
         .tempat_lahir,
-        .tempat_lahir_atas,
         .otorisasi {
             text-transform: uppercase;
         }
@@ -330,44 +249,22 @@
     <div class="nama-belakang">
         <?= $paspor->nama_belakang ?>
     </div>
-    <div class="nama-belakang-atas">
-        <?= $paspor->nama_belakang ?>
-    </div>
     <div class="nama-depan">
         <?= $paspor->nama_depan ?>
     </div>
-    <div class="nama-depan-atas">
-        <?= $paspor->nama_depan ?>
-    </div>
-    <div class="nama-tengah">
-        <?= $paspor->nama_tengah ?>
-    </div>
     <div class="negara">
-        <p>O'ZBEKISTON RESPUBLIKASI FUQAROSI</p>
-    </div>
-    <div class="negara-atas">
-        <p>O'ZBEKISTON RESPUBLIKASI FUQAROSI</p>
+        <p>VENEZOLANA</p>
     </div>
     <div class="lembaga">
         <p>TOSHKENT VILOYATI <BR>O'RTACHIRCHIQ TUMANI IIB</p>
     </div>
     <div class="tgl_lahir">
-        <?= date('d m Y', strtotime($paspor->tgl_lahir)) ?>
-    </div>
-    <div class="tgl_lahir_atas">
-        <?= date('d m Y', strtotime($paspor->tgl_lahir)) ?>
+        <?= date('d / M / M / Y', strtotime($paspor->tgl_lahir)) ?>
     </div>
     <div class="gender">
         <?= $paspor->gender ?>
     </div>
-    <div class="gender_atas">
-        <?= ($paspor->gender == 'F') ? 'A Y O L' : 'O D A M' ?>
-    </div>
     <div class="tempat_lahir">
-        <?= $paspor->tempat_lahir ?>
-    </div>
-
-    <div class="tempat_lahir_atas">
         <?= $paspor->tempat_lahir ?>
     </div>
 
@@ -386,16 +283,11 @@
     </div>
 
     <div class="tgl_dibuat">
-        <?= date('d m y', strtotime($paspor->tgl_dibuat)) ?>
+        <?= date('d / M / M / y', strtotime($paspor->tgl_dibuat)) ?>
     </div>
 
     <div class="tgl_exp">
-        <?= date('d m y', strtotime($paspor->tgl_exp)) ?>
-    </div>
-
-    <div class="otorisasi">
-        <!-- <?= $namaUzbek['full_name']; ?> -->
-        FARG'0NA SH. ADLIYA<BR>BO'LIMI
+        <?= date('d / M / M / y', strtotime($paspor->tgl_exp)) ?>
     </div>
 
     <div class="dot-serial"><?= $noPasporUZ ?></div>

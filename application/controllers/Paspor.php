@@ -703,7 +703,7 @@ class Paspor extends CI_Controller
         $background = base_url('assets/img/vene.png');
 
         // load view sebagai string
-        $html = $this->load->view('paspor/paspor_uz', [
+        $html = $this->load->view('paspor/paspor_ve', [
             'paspor'     => $paspor,
             'background' => $background,
             'kodeautentikasi'    => $kodeautentikasi,
