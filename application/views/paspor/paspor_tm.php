@@ -353,7 +353,7 @@
     </div>
 
     <div class="mrz-line2">
-        <?= $noPasporTM ?><span class="lt">&lt;</span><?= $noFooter ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><?= $noFooter1digit ?>
+        <?= $noPasporTM ?><span class="lt">&lt;</span><?= $noFooter ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><?= $noFooter1digit ?>
         <!-- <?= $mrzLine2 ?> -->
     </div>
 
