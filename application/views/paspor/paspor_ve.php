@@ -19,6 +19,28 @@
             /* font-family: Arial, Helvetica, sans-serif; */
         }
 
+        .p {
+            position: absolute;
+            top: 617px;
+            /* atur sesuai posisi kotak biru */
+            left: 260px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 15px;
+            font-weight: bold;
+            color: #404040ff;
+        }
+
+        .ven {
+            position: absolute;
+            top: 617px;
+            /* atur sesuai posisi kotak biru */
+            left: 345px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 15px;
+            font-weight: bold;
+            color: #404040ff;
+        }
+
         .nama-belakang {
             position: absolute;
             top: 669px;
@@ -46,6 +68,17 @@
             top: 730px;
             /* atur sesuai posisi kotak biru */
             left: 260px;
+            /* geser kanan sesuai kotak biru */
+            font-size: 15px;
+            font-weight: bold;
+            color: #404040ff;
+        }
+
+        .personalNumber {
+            position: absolute;
+            top: 745px;
+            /* atur sesuai posisi kotak biru */
+            right: 275px;
             /* geser kanan sesuai kotak biru */
             font-size: 15px;
             font-weight: bold;
@@ -98,13 +131,13 @@
 
         .no_paspor {
             position: absolute;
-            top: 605px;
+            top: 633px;
             /* atur sesuai posisi kotak biru */
-            left: 583px;
+            right: 210px;
             /* geser kanan sesuai kotak biru */
-            font-size: 18px;
+            font-size: 15px;
             font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .signature {
@@ -133,7 +166,7 @@
             position: absolute;
             bottom: 160px;
             /* sesuaikan agar pas dengan kotak foto */
-            left: 65px;
+            left: 50px;
             /* geser ke kanan */
         }
 
@@ -147,29 +180,30 @@
 
         .mrz-line1 {
             position: absolute;
-            top: 995px;
+            bottom: 75px;
             /* atur sesuai posisi kotak biru */
-            left: 65px;
-            font-size: 18px;
+            left: 35px;
+            font-size: 20px;
             text-align: justify;
             font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .mrz-line2 {
             position: absolute;
-            bottom: 75px;
+            bottom: 40px;
             /* atur sesuai posisi kotak biru */
-            left: 65px;
-            font-size: 18px;
+            left: 35px;
+            font-size: 20px;
             text-align: justify;
             font-weight: bold;
-            color: #6b6b6bff;
+            color: #404040ff;
         }
 
         .lt {
-            font-size: 21px;
+            font-size: 24px;
             font-weight: bold;
+            color: #404040ff;
             /* lebih besar dari huruf biasa */
         }
 
@@ -246,6 +280,12 @@
 <body>
 
     <!-- tampilkan data -->
+    <div class="p">
+        <p>P</p>
+    </div>
+    <div class="ven">
+        <p>VEN</p>
+    </div>
     <div class="nama-belakang">
         <?= $paspor->nama_belakang ?>
     </div>
@@ -269,9 +309,11 @@
     </div>
 
     <div class="no_paspor">
-        <?= $noPasporUZ ?>
+        <?= $noPasporVE ?>
     </div>
-
+    <div class="personalNumber">
+        <?= $personalNumberVE ?>
+    </div>
     <div class="signature">
         <img src="<?= base_url('assets/upload/paspor/' . $paspor->signature) ?>"
             alt="Tanda Tangan" class="signature-img">
@@ -290,15 +332,15 @@
         <?= date('d / M / M / y', strtotime($paspor->tgl_exp)) ?>
     </div>
 
-    <div class="dot-serial"><?= $noPasporUZ ?></div>
+    <div class="dot-serial"><?= $noPasporVE ?></div>
 
     <div class="mrz-line1">
-        P <span class="lt">&lt;</span> UZB<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
+        P<span class="lt">&lt;</span>VEN<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
 
     <div class="mrz-line2">
-        <?= $noPasporUZ ?>UZB<?= $noFooter ?>
+        <?= $noPasporVE ?>4VEN<?= $noFooter ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><?= $noFooter2digit ?>
         <!-- <?= $mrzLine2 ?> -->
     </div>
 

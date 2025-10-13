@@ -352,6 +352,10 @@ class Paspor extends CI_Controller
             // uzbekistan: UT + 6 digit angka
             $belakang = str_pad(rand(0, 999999), 6, '0', STR_PAD_LEFT);
             return 'GF' . $belakang;
+        } elseif ($kode_negara === 've_VE') {
+            // uzbekistan: UT + 6 digit angka
+            $belakang = str_pad(rand(0, 999999), 9, '0', STR_PAD_LEFT);
+            return $belakang;
         } else {
             // 🇷🇺 Default (misalnya Rusia): 2 digit angka + spasi + 7 digit angka
             $depan = str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
@@ -361,36 +365,19 @@ class Paspor extends CI_Controller
     }
 
 
-    private function generatePersonalNumber()
+    private function generatePersonalNumber($kode_negara = 'tm_TM')
     {
-        // 9 digit angka random
-        $angka = str_pad(rand(0, 999999999), 9, '0', STR_PAD_LEFT);
-
-        // tambah prefix DZ
-        return 'DZ' . $angka;
+        if ($kode_negara === 've_VE') {
+            // Venezuela → 7 digit angka acak
+            $angka = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+            return $angka;
+        } else {
+            // Default / Turkmenistan → DZ + 9 digit angka acak
+            $angka = str_pad(rand(0, 999999999), 9, '0', STR_PAD_LEFT);
+            return 'DZ' . $angka;
+        }
     }
 
-
-    // private function generateNumbFooter()
-    // {
-    //     // 7 digit depan (fixed 7 digit dengan leading zero)
-    //     $depan = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
-
-    //     // Huruf random A - Z
-    //     $huruf = chr(rand(65, 90)); // 65-90 = ASCII A-Z
-
-    //     // Tentukan panjang acak antara 7 - 22
-    //     $panjang = rand(15, 15);
-
-    //     // Generate angka belakang sesuai panjang acak
-    //     $belakang = '';
-    //     for ($i = 0; $i < $panjang; $i++) {
-    //         $belakang .= rand(0, 9);
-    //     }
-
-    //     // gabungkan
-    //     return $depan . $huruf . $belakang;
-    // }
 
     private function generateNumbFooter($countryCode = 'ru_RU')
     {
@@ -456,6 +443,15 @@ class Paspor extends CI_Controller
             }
 
             return $angka7 . $huruf . $angka29;
+        } elseif ($countryCode === 've_VE') {
+            // Venezuela → 7 angka + huruf M + 14 angka
+            $angka7 = str_pad(rand(0, 9999999), 7, '0', STR_PAD_LEFT);
+            $huruf = 'M';
+            $angka14 = '';
+            for ($i = 0; $i < 14; $i++) {
+                $angka14 .= rand(0, 9);
+            }
+            return $angka7 . $huruf . $angka14;
         }
 
         // fallback kalau kodenya tidak dikenali
@@ -468,6 +464,9 @@ class Paspor extends CI_Controller
             // Rusia → 1 digit angka (1–9)
             return str_pad(rand(1, 9), 1, '0', STR_PAD_LEFT);
         } elseif ($countryCode === 'tk_TM') {
+            // Turkmenistan → 2 digit angka (00–99)
+            return str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
+        }elseif ($countryCode === 've_VE') {
             // Turkmenistan → 2 digit angka (00–99)
             return str_pad(rand(0, 99), 2, '0', STR_PAD_LEFT);
         }
@@ -693,10 +692,11 @@ class Paspor extends CI_Controller
         }
 
         $kodeautentikasi = $this->generateAuthCode(4);
-        $noPasporUZ    = $this->generateNoPaspor('uz_UZ');
-        $noFooter = $this->generateNumbFooter('uz_UZ');
-        // $noFooter1digit = $this->generateNumbFooterBelakang('tk_TM');
+        $noPasporVE    = $this->generateNoPaspor('ve_VE');
+        $noFooter = $this->generateNumbFooter('ve_VE');
+        $personalNumberVE = $this->generatePersonalNumber('ve_VE');
         // ✅ generate nama Uzbek random
+        $noFooter2digit = $this->generateNumbFooterBelakang('ve_VE');
         $namaUzbek = $this->generateUzbekName();
 
         // background image (gunakan absolute URL)
@@ -707,9 +707,10 @@ class Paspor extends CI_Controller
             'paspor'     => $paspor,
             'background' => $background,
             'kodeautentikasi'    => $kodeautentikasi,
-            'noPasporUZ'   => $noPasporUZ,
+            'noPasporVE'   => $noPasporVE,
             'noFooter'   => $noFooter,
-            // 'noFooter1digit'   => $noFooter1digit,
+            'personalNumberVE' => $personalNumberVE,
+            'noFooter2digit'   => $noFooter2digit,
             'namaUzbek'  => $namaUzbek,
         ], true);
 
