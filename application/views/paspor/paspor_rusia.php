@@ -179,13 +179,13 @@
             position: absolute;
             bottom: 65px;
             /* atur sesuai posisi kotak biru */
-            left: 65px;
+            left: 63px;
             font-size: 21px;
             text-align: justify;
         }
 
         .lt {
-            font-size: 23px;
+            font-size: 24px;
             /* lebih besar dari huruf biasa */
         }
 
@@ -312,27 +312,14 @@
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
-    <?php
-    // generate MRZ Line 2 dengan panjang fix 44 karakter
-    $line2 = str_replace(' ', '', $noPaspor) . $noFooter1digit . 'RUS' . $noFooter;
-
-    $totalLength = 44;
-    // sisakan space buat digit terakhir ($noFooter1digit)
-    $remaining = $totalLength - strlen($line2) - strlen($noFooter1digit);
-
-    // $fill = str_repeat(, max(0, $remaining));
-
-    $mrzLine2 = $line2 . '<span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>' . $noFooter1digit;
-    ?>
 
     <div class="mrz-line2">
-        <?= $mrzLine2 ?>
+        <?= $noPaspor ?><?= $noFooter1digit ?>RUS<?= $noFooter ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><?= $noFooter1digit ?>
+        <!-- <?= $mrzLine2 ?> -->
     </div>
-
-
 
     <!-- <?= $paspor->nama_belakang_trans ?><<<?= $paspor->nama_depan_trans ?><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<br>
         <?= $noPaspor ?>0RUS<?= $noFooter ?><<<<<<<<<<<<<<<<<<<<<<<<<?= '06' ?> -->
