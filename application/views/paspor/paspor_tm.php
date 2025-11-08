@@ -226,7 +226,7 @@
             position: absolute;
             bottom: 65px;
             /* atur sesuai posisi kotak biru */
-            left: 65px;
+            left: 63px;
             font-size: 21px;
             text-align: justify;
         }
@@ -326,11 +326,6 @@
             alt="Foto Paspor" class="foto-img">
     </div>
 
-    <div class="foto-wrapper">
-        <img src="<?= base_url('assets/upload/paspor/' . $paspor->filefoto) ?>"
-            alt="Foto Paspor" class="foto-img">
-    </div>
-
     <div class="tgl_dibuat">
         <?= date('d.m.y', strtotime($paspor->tgl_dibuat)) ?>
     </div>
@@ -348,7 +343,7 @@
     </div>
 
     <div class="mrz-line1">
-        P<span class="lt">&lt;</span>TKM<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+        P<span class="lt">&lt;</span>TKM<?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
         <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
     </div>
 

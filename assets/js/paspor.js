@@ -8,6 +8,12 @@ $(document).ready(function () {
 		// $("#modalTambah").modal("show"); // bootstrap 5 juga sama
 	});
 
+	$(document).on("click", "#btnBulkData", function (e) {
+		e.preventDefault();
+		$("#modalBulk").modal("show"); // bootstrap 4
+		// $("#modalTambah").modal("show"); // bootstrap 5 juga sama
+	});
+
 	$(document).on("click", ".print", function () {
 		let id = $(this).data("id");
 		let kode = $(this).data("kode"); // ambil kode negara
@@ -172,6 +178,71 @@ $(document).ready(function () {
 			},
 		});
 	});
+
+	// fungsi bulk
+	$(document).on("submit", "#formBulkPaspor", function (e) {
+		e.preventDefault();
+
+		let negara = $("#negara_bulk").val();
+		let jumlah = parseInt($("#jumlah").val());
+
+		if (!negara || jumlah <= 0) {
+			Swal.fire({
+				icon: "warning",
+				title: "Oops...",
+				text: "Pilih negara dan isi jumlah terlebih dahulu!",
+			});
+			return;
+		}
+
+		Swal.fire({
+			title: "Sedang memproses...",
+			text: "Mohon tunggu, data sedang digenerate.",
+			allowOutsideClick: false,
+			didOpen: () => {
+				Swal.showLoading();
+			},
+		});
+
+		$.ajax({
+			url: BASE_URL + "paspor/bulkGenerate",
+			type: "POST",
+			data: { locale: negara, jumlah: jumlah },
+			dataType: "json",
+			success: function (res) {
+				Swal.close();
+
+				if (res.status === "success") {
+					$("#modalBulk").modal("hide");
+					 $("#formBulkPaspor")[0].reset();
+
+					Swal.fire({
+						icon: "success",
+						title: "Berhasil!",
+						text: `${res.inserted} data berhasil digenerate dan disimpan.`,
+					});
+
+					// Refresh table setelah insert
+					tablePaspor();
+				} else {
+					Swal.fire({
+						icon: "error",
+						title: "Gagal!",
+						text: res.message || "Terjadi kesalahan saat menyimpan data.",
+					});
+				}
+			},
+			error: function (xhr) {
+				Swal.close();
+				Swal.fire({
+					icon: "error",
+					title: "Error!",
+					text: "Terjadi kesalahan pada server.",
+				});
+			},
+		});
+	});
+
 });
 
 // document.addEventListener("DOMContentLoaded", function () {
@@ -199,6 +270,11 @@ function tablePaspor() {
 					class="btn btn-primary" 
 					id="btnTambahData">
 					<i class="fa fa-plus"></i> Tambah Data
+					</a>
+					<a href="#" 
+					class="btn btn-success" 
+					id="btnBulkData">
+						<i class="fa fa-plus"></i> Bulk Data
 					</a>
 				`);
 

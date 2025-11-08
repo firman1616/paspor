@@ -1,7 +1,7 @@
 <footer class="footer">
 	<div class="container-fluid">
 		<div class="copyright ml-auto">
-			2025, made with </i> by <a href="https://www.themekita.com">IT PT. Mega Marine Pride</a>
+			2025, made with </i>Heart</a>
 		</div>
 	</div>
 </footer>

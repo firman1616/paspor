@@ -173,6 +173,11 @@
             left: 65px;
             font-size: 21px;
             text-align: justify;
+            white-space: nowrap;
+            overflow: hidden;
+            width:665px;
+            height: 25px;
+            text-overflow:clip;
         }
 
         .mrz-line2 {
@@ -306,19 +311,76 @@
         <?= $paspor->tgl_exp ?>
     </div>
 
-    <div class="no_paspor_top">
-        <!-- <?= $noPaspor ?> -->
-        <h2>Lorem ipsum</h2>
-    </div>
+    <!-- <div class="no_paspor_top">
+        <?= $noPaspor ?>
+        <h2></h2>
+    </div> -->
 
-    <div class="mrz-line1">
+    <!-- <div class="mrz-line1">
         P<span class="lt">&lt;</span><?= strtoupper($paspor->nama_belakang_trans) ?><span class="lt">&lt;</span><?= strtoupper($paspor->nama_depan_trans) ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span>
-        <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
+    </div> -->
+    <!-- teruskan sesuai jumlah < yang kamu butuhkan -->
+     <?php
+        foreach (str_split(str_replace(" ","",strtoupper($paspor->nama_belakang_trans))) as $charb) {
+            $nm_belakang[] = $charb;
+        }
+        foreach (str_split(str_replace(" ","",strtoupper($paspor->nama_depan_trans))) as $chard) {
+            $nm_depan[] = $chard;
+        }
+     ?>
+    <div class="mrz-line1">
+    <?php
+    $t = '&lt;';
+    echo "P".$t;
+    for($i=0;$i<count($nm_belakang);$i++){
+        echo $nm_belakang[$i];
+    }
+    echo "&lt;";
+    for($k=0;$k<count($nm_depan);$k++){
+        echo $nm_depan[$k];
+    }
+    for($j=0;$j<43-count($nm_belakang)-count($nm_depan);$j++){
+        echo $t;
+    }
+    ?>
     </div>
+    <!-- <div class="mrz-line2">
+        <?= $noPaspor ?><?= $noFooter1digit ?>RUS<?= $noFooter ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><?= $noFooter1digit ?>
+    </div> -->
+    <!-- <?= $mrzLine2 ?> -->
+
+    <?php
+        foreach (str_split(str_replace(" ","",strtoupper($noPaspor))) as $charnp) {
+            $pasporNo[] = $charnp;
+        }
+        foreach (str_split(str_replace(" ","",strtoupper($noFooter1digit))) as $charnf1) {
+            $footerNo1digit[] = $charnf1;
+        }
+        foreach (str_split(str_replace(" ","",strtoupper($noFooter))) as $charnf) {
+            $footerNo[] = $charnf;
+        }
+     ?>
 
     <div class="mrz-line2">
-        <?= $noPaspor ?><?= $noFooter1digit ?>RUS<?= $noFooter ?><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><span class="lt">&lt;</span><?= $noFooter1digit ?>
-        <!-- <?= $mrzLine2 ?> -->
+        <span><?php
+    $t = '&lt;';
+    for($i=0;$i<count($pasporNo);$i++){
+        echo $pasporNo[$i];
+    }
+    for($k=0;$k<count($footerNo1digit);$k++){
+        echo $footerNo1digit[$k];
+    }
+    echo "RUS";
+    for($l=0;$l<count($footerNo);$l++){
+        echo $footerNo[$l];
+    }
+    for($j=0;$j<46-count($pasporNo)-count($footerNo1digit)-count($footerNo);$j++){
+        echo $t;
+    }
+    for($k=0;$k<count($footerNo1digit);$k++){
+        echo $footerNo1digit[$k];
+    }
+    ?></span>
     </div>
 
     <!-- <?= $paspor->nama_belakang_trans ?><<<?= $paspor->nama_depan_trans ?><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<br>
