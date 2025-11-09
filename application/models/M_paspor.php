@@ -5,4 +5,9 @@ class M_paspor extends CI_Model
     {
         return $this->db->insert('tbl_paspor', $data);
     }
+
+    public function deletePaspor($id)
+    {
+        return $this->db->where('id', $id)->delete('tbl_paspor');
+    }
 }

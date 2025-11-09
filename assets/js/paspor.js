@@ -214,7 +214,7 @@ $(document).ready(function () {
 
 				if (res.status === "success") {
 					$("#modalBulk").modal("hide");
-					 $("#formBulkPaspor")[0].reset();
+					$("#formBulkPaspor")[0].reset();
 
 					Swal.fire({
 						icon: "success",
@@ -242,6 +242,68 @@ $(document).ready(function () {
 			},
 		});
 	});
+
+	$(document).on("click", ".hapus", function () {
+		let id = $(this).data("id");
+
+		Swal.fire({
+			title: "Apakah kamu yakin?",
+			text: "Data ini akan dihapus secara permanen!",
+			icon: "warning",
+			showCancelButton: true,
+			confirmButtonText: "Ya, hapus!",
+			cancelButtonText: "Batal",
+			reverseButtons: true
+		}).then((result) => {
+			if (result.isConfirmed) {
+				$.ajax({
+					url: BASE_URL + "paspor/deletePaspor", // 🔹 ubah sesuai nama fungsi di controllermu
+					type: "POST",
+					data: { id: id },
+					dataType: "json",
+					beforeSend: function () {
+						Swal.fire({
+							title: "Menghapus...",
+							text: "Mohon tunggu sebentar",
+							allowOutsideClick: false,
+							didOpen: () => Swal.showLoading(),
+						});
+					},
+					success: function (res) {
+						Swal.close();
+
+						if (res.status === "success") {
+							Swal.fire({
+								icon: "success",
+								title: "Berhasil!",
+								text: res.message || "Data berhasil dihapus.",
+								timer: 1500,
+								showConfirmButton: false,
+							});
+
+							// ✅ refresh tabel
+							tablePaspor();
+						} else {
+							Swal.fire({
+								icon: "error",
+								title: "Gagal!",
+								text: res.message || "Data gagal dihapus.",
+							});
+						}
+					},
+					error: function () {
+						Swal.close();
+						Swal.fire({
+							icon: "error",
+							title: "Error!",
+							text: "Terjadi kesalahan pada server.",
+						});
+					},
+				});
+			}
+		});
+	});
+
 
 });
 

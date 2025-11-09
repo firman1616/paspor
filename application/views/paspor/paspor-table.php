@@ -17,7 +17,6 @@
             <td><?= $row->asal_negara ?></td>
             <td>
                 <button type="button" class="btn btn-primary btn-sm print" data-id="<?= $row->id ?>" data-kode="<?= $row->kode_negara ?>"> <i class="fa fa-print"></i></button>
-                <button type="button" class="btn btn-warning btn-sm edit"  data-id="<?= $row->id ?>"><i class="fa fa-edit"></i></button>
                 <button type="button" class="btn btn-danger btn-sm hapus" data-id="<?= $row->id ?>"><i class="fa fa-trash"></i></button>
             </td>
         </tr>

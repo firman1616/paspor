@@ -406,6 +406,8 @@ class Paspor extends CI_Controller
             'cn_ZH' => 'Tiongkok',
             'tr_TR' => 'Turki',
             'in_IN' => 'India',
+            'tk_TM' => 'Turkmenistan',
+            've_VE' => 'Venezuela',
             // tambahkan sesuai kebutuhanmu
         ];
 
@@ -1523,5 +1525,25 @@ class Paspor extends CI_Controller
         $mpdf->WriteHTML($html);
 
         $mpdf->Output("paspor_{$paspor->id}.pdf", "I");
+    }
+
+    public function deletePaspor()
+    {
+        $id = $this->input->post('id');
+
+        if (!$id) {
+            echo json_encode(['status' => 'error', 'message' => 'ID tidak ditemukan.']);
+            return;
+        }
+
+        $this->load->model('M_paspor');
+
+        $deleted = $this->M_paspor->deletePaspor($id);
+
+        if ($deleted) {
+            echo json_encode(['status' => 'success', 'message' => 'Data berhasil dihapus.']);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Data gagal dihapus atau tidak ditemukan.']);
+        }
     }
 }
