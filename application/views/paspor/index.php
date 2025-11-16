@@ -60,6 +60,32 @@
     </div>
 </div>
 
+<!-- bulk hapus modal data -->
+ <div class="modal fade" id="modalBulkHapus" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Hapus Data Paspor</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <!-- isi form -->
+                <form id="formBulkPasporHapus">
+                    <label for="jumlah">Jumlah data dihapus</label>
+                    <input type="number" name="jumlah_data_dihapus" id="jumlah_data_dihapus" class="form-control" required>
+                    <div class="modal-footer">
+                        <button type="submit" form="formBulkPasporHapus" class="btn btn-danger">Bulk Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Modal Tambah Data -->
 <div class="modal fade" id="modalTambah" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">

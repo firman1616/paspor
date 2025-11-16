@@ -453,6 +453,47 @@ class Paspor extends CI_Controller
         echo json_encode(['status' => 'success', 'inserted' => $inserted]);
     }
 
+    // bulk delete
+    public function bulkDeletePaspor()
+    {
+        $jumlah = $this->input->post('jumlah_data_dihapus');
+
+        if (!$jumlah || !is_numeric($jumlah)) {
+            echo json_encode([
+                'status' => 'error',
+                'message' => 'Jumlah data tidak valid.'
+            ]);
+            return;
+        }
+
+        // load model
+        $this->load->model('M_paspor');
+
+        // ambil data paling lama sesuai limit input
+        $oldData = $this->M_paspor->getOldestData($jumlah);
+
+        if (empty($oldData)) {
+            echo json_encode([
+                'status' => 'warning',
+                'message' => 'Tidak ada data yang bisa dihapus.'
+            ]);
+            return;
+        }
+
+        // kumpulkan id untuk dihapus
+        $ids = array_map(function ($row) {
+            return $row->id;
+        }, $oldData);
+
+        // hapus data
+        $this->M_paspor->deleteByIds($ids);
+
+        echo json_encode([
+            'status' => 'success',
+            'message' => count($ids) . ' data berhasil dihapus.'
+        ]);
+    }
+
 
     public function simpan()
 

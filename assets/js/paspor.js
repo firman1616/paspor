@@ -14,6 +14,13 @@ $(document).ready(function () {
 		// $("#modalTambah").modal("show"); // bootstrap 5 juga sama
 	});
 
+	// bulk hapus data
+	$(document).on("click", "#btnDeleteData", function (e) {
+		e.preventDefault();
+		$("#modalBulkHapus").modal("show"); // bootstrap 4
+		// $("#modalTambah").modal("show"); // bootstrap 5 juga sama
+	});
+
 	$(document).on("click", ".print", function () {
 		let id = $(this).data("id");
 		let kode = $(this).data("kode"); // ambil kode negara
@@ -243,6 +250,87 @@ $(document).ready(function () {
 		});
 	});
 
+	// bulk delete
+	$(document).on("submit", "#formBulkPasporHapus", function (e) {
+		e.preventDefault();
+
+		let jumlah = parseInt($("#jumlah_data_dihapus").val());
+
+		if (jumlah <= 0 || isNaN(jumlah)) {
+			Swal.fire({
+				icon: "warning",
+				title: "Oops...",
+				text: "Isi jumlah data yang ingin dihapus!",
+			});
+			return;
+		}
+
+		// Tampilkan loading
+		Swal.fire({
+			title: "Menghapus data...",
+			text: "Mohon tunggu, sedang memproses penghapusan data.",
+			allowOutsideClick: false,
+			didOpen: () => {
+				Swal.showLoading();
+			},
+		});
+
+		$.ajax({
+			url: BASE_URL + "paspor/bulkDeletePaspor",
+			type: "POST",
+			data: $(this).serialize(),
+			dataType: "json",
+			success: function (res) {
+				Swal.close();
+
+				if (res.status === "success") {
+
+					// Tutup modal
+					$("#modalBulkHapus").modal("hide");
+
+					// Reset form
+					$("#formBulkPasporHapus")[0].reset();
+
+					// Alert Success
+					Swal.fire({
+						icon: "success",
+						title: "Berhasil!",
+						text: res.message,
+					});
+
+					// Refresh tabel
+					tablePaspor();
+
+				} else if (res.status === "warning") {
+
+					Swal.fire({
+						icon: "warning",
+						title: "Peringatan!",
+						text: res.message,
+					});
+
+				} else {
+
+					Swal.fire({
+						icon: "error",
+						title: "Gagal!",
+						text: res.message,
+					});
+
+				}
+			},
+			error: function () {
+				Swal.close();
+				Swal.fire({
+					icon: "error",
+					title: "Error!",
+					text: "Terjadi kesalahan pada server.",
+				});
+			}
+		});
+	});
+
+
 	$(document).on("click", ".hapus", function () {
 		let id = $(this).data("id");
 
@@ -337,6 +425,11 @@ function tablePaspor() {
 					class="btn btn-success" 
 					id="btnBulkData">
 						<i class="fa fa-plus"></i> Bulk Data
+					</a>
+					<a href="#" 
+					class="btn btn-danger" 
+					id="btnDeleteData">
+						<i class="fa fa-trash"></i> Hapus Bulk Data
 					</a>
 				`);
 
